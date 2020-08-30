@@ -1,0 +1,74 @@
+from pathlib import Path
+configfile: "config.yaml"
+output_dir = Path(config["pipeline_output"])
+
+rule all:
+    input:
+        output_dir / "data",
+        output_dir / "pangenome_variations",
+        output_dir / "subsampler",
+        output_dir / "pandora_analysis_pipeline",
+        output_dir / "variant_callers_pipeline"
+
+
+rule unzip_data:
+    input:
+        config["zipped_input_data"]
+    output:
+        directory(output_dir / "data")
+    shell:
+        "unzip {input} -d {output_dir}"
+
+
+rule install_pangenome_variations:
+    output:
+          directory(output_dir / "pangenome_variations")
+    shell:
+        """
+        cd {output_dir} && \
+        git clone --recursive git@github.com:leoisl/pangenome_variations.git && \
+        cd pangenome_variations && \
+        git checkout pandora_paper_tag1 && \
+        ./setup.sh
+        """
+
+
+rule install_subsampler:
+    output:
+          directory(output_dir / "subsampler")
+    shell:
+        """
+        cd {output_dir} && \
+        git clone --recursive git@github.com:leoisl/subsampler.git && \
+        cd subsampler && \
+        git checkout pandora_paper_tag1 && \
+        ./setup.sh
+        """
+
+
+rule install_pandora_analysis_pipeline:
+    output:
+          directory(output_dir / "pandora_analysis_pipeline")
+    shell:
+        """
+        cd {output_dir} && \
+        git clone --recursive git@github.com:leoisl/pandora_analysis_pipeline.git && \
+        cd pandora_analysis_pipeline && \
+        git checkout pandora_paper_tag1 && \
+        ./setup.sh
+        """
+
+
+rule install_variant_callers_pipeline:
+    output:
+          directory(output_dir / "variant_callers_pipeline")
+    shell:
+        """
+        cd {output_dir} && \
+        git clone --recursive git@github.com:leoisl/variant_callers_pipeline.git && \
+        cd variant_callers_pipeline && \
+        git checkout pandora_paper_tag1 && \
+        ./setup.sh
+        """
+
+

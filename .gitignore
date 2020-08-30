@@ -1,0 +1,6 @@
+/venv/
+/.snakemake/
+/logs/
+/pandora_sample_data/
+
+.idea/
