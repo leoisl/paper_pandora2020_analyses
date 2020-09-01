@@ -33,6 +33,6 @@ cd ../../
 
 cd ${pipeline_output}/variant_callers_pipeline
 source venv/bin/activate
-snakemake --profile lsf --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ --keep-going || { echo 'pandora_analysis_pipeline failed;' ; exit 1; }
+snakemake --profile lsf --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ --keep-going || { echo 'variant_callers_pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
