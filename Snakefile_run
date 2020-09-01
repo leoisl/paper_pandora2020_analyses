@@ -17,11 +17,12 @@ rule run_pangenome_variations:
     threads: 1
     resources:
         mem_mb=16000
+    log: logs/run_pangenome_variations.log
     shell:
         """
         cd {output_dir}/pangenome_variations && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
+        snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ >{log} 2>&1
         """
 
 
@@ -31,11 +32,12 @@ rule run_subsampler:
     threads: 1
     resources:
         mem_mb=16000
+    log: logs/run_subsampler.log
     shell:
         """
         cd {output_dir}/subsampler && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
+        snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ >{log} 2>&1
         """
 
 
@@ -47,11 +49,12 @@ rule run_pandora_analysis_pipeline:
     threads: 16
     resources:
         mem_mb=32000
+    log: logs/run_pandora_analysis_pipeline.log
     shell:
         """
         cd {output_dir}/pandora_analysis_pipeline && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
+        bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ >{log} 2>&1
         """
 
 
@@ -63,9 +66,10 @@ rule run_variant_callers_pipeline:
     threads: 16
     resources:
         mem_mb=32000
+    log: logs/run_variant_callers_pipeline.log
     shell:
         """
         cd {output_dir}/variant_callers_pipeline && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
+        snakemake --profile lsf --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ --keep-going >{log} 2>&1
         """
