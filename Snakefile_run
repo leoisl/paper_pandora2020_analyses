@@ -21,7 +21,7 @@ rule run_pangenome_variations:
         """
         cd {output_dir}/pangenome_variations && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml
+        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
         """
 
 
@@ -35,7 +35,7 @@ rule run_subsampler:
         """
         cd {output_dir}/subsampler && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml
+        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
         """
 
 
@@ -51,7 +51,7 @@ rule run_pandora_analysis_pipeline:
         """
         cd {output_dir}/pandora_analysis_pipeline && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml
+        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
         """
 
 
@@ -67,5 +67,5 @@ rule run_variant_callers_pipeline:
         """
         cd {output_dir}/variant_callers_pipeline && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.no_nanopolish.yaml
+        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/
         """
