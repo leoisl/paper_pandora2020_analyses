@@ -67,5 +67,5 @@ rule run_variant_callers_pipeline:
         """
         cd {output_dir}/variant_callers_pipeline && \
         source venv/bin/activate && \
-        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.yaml
+        bash scripts/submit_lsf.sh --configfile config.pandora_paper_tag1.no_nanopolish.yaml
         """
