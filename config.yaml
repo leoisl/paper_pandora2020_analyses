@@ -1,2 +1,2 @@
-zipped_input_data: sample_data/data.zip
-pipeline_output: pandora_sample_data
+zipped_input_data: ../zipped_data/data.zip
+pipeline_output: pandora_full_analysis
