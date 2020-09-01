@@ -22,6 +22,7 @@ rule run_pangenome_variations:
     shell:
         """
         cd {output_dir}/pangenome_variations && \
+        mkdir -p logs && \
         source venv/bin/activate && \
         snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ >{log} 2>&1
         """
@@ -38,6 +39,7 @@ rule run_subsampler:
     shell:
         """
         cd {output_dir}/subsampler && \
+        mkdir -p logs && \
         source venv/bin/activate && \
         snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ >{log} 2>&1
         """
@@ -56,6 +58,7 @@ rule run_pandora_analysis_pipeline:
     shell:
         """
         cd {output_dir}/pandora_analysis_pipeline && \
+        mkdir -p logs && \
         source venv/bin/activate && \
         bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ >{log} 2>&1
         """
@@ -74,6 +77,7 @@ rule run_variant_callers_pipeline:
     shell:
         """
         cd {output_dir}/variant_callers_pipeline && \
+        mkdir -p logs && \
         source venv/bin/activate && \
         snakemake --profile lsf --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ --keep-going >{log} 2>&1
         """
