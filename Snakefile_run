@@ -17,7 +17,8 @@ rule run_pangenome_variations:
     threads: 1
     resources:
         mem_mb=16000
-    log: logs/run_pangenome_variations.log
+    log:
+        "logs/run_pangenome_variations.log"
     shell:
         """
         cd {output_dir}/pangenome_variations && \
@@ -32,7 +33,8 @@ rule run_subsampler:
     threads: 1
     resources:
         mem_mb=16000
-    log: logs/run_subsampler.log
+    log:
+        "logs/run_subsampler.log"
     shell:
         """
         cd {output_dir}/subsampler && \
@@ -49,7 +51,8 @@ rule run_pandora_analysis_pipeline:
     threads: 16
     resources:
         mem_mb=32000
-    log: logs/run_pandora_analysis_pipeline.log
+    log:
+        "logs/run_pandora_analysis_pipeline.log"
     shell:
         """
         cd {output_dir}/pandora_analysis_pipeline && \
@@ -66,7 +69,8 @@ rule run_variant_callers_pipeline:
     threads: 16
     resources:
         mem_mb=32000
-    log: logs/run_variant_callers_pipeline.log
+    log:
+        "logs/run_variant_callers_pipeline.log"
     shell:
         """
         cd {output_dir}/variant_callers_pipeline && \
