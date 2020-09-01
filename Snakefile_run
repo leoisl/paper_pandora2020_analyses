@@ -14,6 +14,9 @@ rule all:
 rule run_pangenome_variations:
     output:
         directory(output_dir / "pangenome_variations/output_pangenome_variations_pandora_paper_tag1")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         """
         cd {output_dir}/pangenome_variations && \
@@ -25,6 +28,9 @@ rule run_pangenome_variations:
 rule run_subsampler:
     output:
         directory(output_dir / "subsampler/output_subsampler_pandora_paper_tag1")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         """
         cd {output_dir}/subsampler && \
@@ -38,6 +44,9 @@ rule run_pandora_analysis_pipeline:
         rules.run_subsampler.output
     output:
         directory(output_dir / "pandora_analysis_pipeline/pandora_output_pandora_paper_tag1")
+    threads: 16
+    resources:
+        mem_mb=32000
     shell:
         """
         cd {output_dir}/pandora_analysis_pipeline && \
@@ -51,6 +60,9 @@ rule run_variant_callers_pipeline:
         rules.run_subsampler.output
     output:
         directory(output_dir / "variant_callers_pipeline/output_other_variant_callers_pandora_paper_tag1")
+    threads: 16
+    resources:
+        mem_mb=32000
     shell:
         """
         cd {output_dir}/variant_callers_pipeline && \

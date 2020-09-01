@@ -16,6 +16,9 @@ rule unzip_data:
         config["zipped_input_data"]
     output:
         directory(output_dir / "data")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         "unzip {input} -d {output_dir}"
 
@@ -23,6 +26,9 @@ rule unzip_data:
 rule install_pangenome_variations:
     output:
           directory(output_dir / "pangenome_variations")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         """
         cd {output_dir} && \
@@ -36,6 +42,9 @@ rule install_pangenome_variations:
 rule install_subsampler:
     output:
           directory(output_dir / "subsampler")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         """
         cd {output_dir} && \
@@ -49,6 +58,9 @@ rule install_subsampler:
 rule install_pandora_analysis_pipeline:
     output:
           directory(output_dir / "pandora_analysis_pipeline")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         """
         cd {output_dir} && \
@@ -62,6 +74,9 @@ rule install_pandora_analysis_pipeline:
 rule install_variant_callers_pipeline:
     output:
           directory(output_dir / "variant_callers_pipeline")
+    threads: 1
+    resources:
+        mem_mb=16000
     shell:
         """
         cd {output_dir} && \
