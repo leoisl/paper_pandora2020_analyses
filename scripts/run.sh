@@ -41,7 +41,7 @@ cd ../../
 cd ${pipeline_output}/pandora_analysis_pipeline
 source venv/bin/activate
 bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  --stats pandora_analysis_pipeline_runtime_stats || { echo 'FATAL ERROR: pandora_analysis_pipeline failed;' ; exit 1; }
+  || { echo 'FATAL ERROR: pandora_analysis_pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
 
