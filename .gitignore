@@ -1,6 +1,5 @@
-/venv/
-/.snakemake/
-/logs/
+/installation_pipeline/venv/
+/installation_pipeline/.snakemake/
+/installation_pipeline/logs/
 /pandora_sample_data/
-
 .idea/

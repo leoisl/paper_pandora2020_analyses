@@ -1,0 +1,1 @@
+dummy: dummy  # so that snakemake does not complain this is not a JSON file
