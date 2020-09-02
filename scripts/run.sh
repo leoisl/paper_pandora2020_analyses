@@ -46,7 +46,7 @@ cd ../../
 
 cd ${pipeline_output}/variant_callers_pipeline
 source venv/bin/activate
-snakemake --profile lsf --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+snakemake --profile lsf --configfile config.pandora_paper_tag1 --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   --keep-going --stats variant_callers_pipeline_runtime_stats --report variant_callers_pipeline_report.zip \
   || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
 deactivate
