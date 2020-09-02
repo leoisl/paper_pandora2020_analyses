@@ -55,7 +55,7 @@ cd ../../
 echo "Running variant_callers_pipeline..."
 cd ${pipeline_output}/variant_callers_pipeline
 source venv/bin/activate
-snakemake --profile "$profile" --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
