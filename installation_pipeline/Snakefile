@@ -8,7 +8,8 @@ rule all:
         output_dir / "pangenome_variations",
         output_dir / "subsampler",
         output_dir / "pandora_analysis_pipeline",
-        output_dir / "variant_callers_pipeline"
+        output_dir / "variant_callers_pipeline",
+        output_dir / "pandora1_paper"
 
 
 rule unzip_data:
@@ -87,3 +88,17 @@ rule install_variant_callers_pipeline:
         """
 
 
+rule install_pandora1_paper:
+    output:
+          directory(output_dir / "pandora1_paper")
+    threads: 1
+    resources:
+        mem_mb=16000
+    shell:
+        """
+        cd {output_dir} && \
+        git clone --recursive git@github.com:leoisl/pandora1_paper.git && \
+        cd pandora1_paper && \
+        git checkout pandora_paper_tag1 && \
+        ./setup.sh
+        """

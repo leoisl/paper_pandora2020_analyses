@@ -15,6 +15,7 @@ profile="lsf"
 mkdir -p "$pipeline_output"
 
 # installation
+echo "Running installation pipeline..."
 cd installation_pipeline
 source venv/bin/activate
 snakemake --restart-times 0 --profile "$profile" --config zipped_input_data="$zipped_input_data" \
@@ -24,6 +25,7 @@ cd ../
 
 
 # run each pipeline one by one
+echo "Running pangenome_variations pipeline..."
 cd ${pipeline_output}/pangenome_variations
 source venv/bin/activate
 snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
@@ -31,6 +33,8 @@ snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --sin
 deactivate
 cd ../../
 
+
+echo "Running subsampler pipeline..."
 cd ${pipeline_output}/subsampler
 source venv/bin/activate
 snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
@@ -38,6 +42,8 @@ snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --sin
 deactivate
 cd ../../
 
+
+echo "Running pandora_analysis_pipeline..."
 cd ${pipeline_output}/pandora_analysis_pipeline
 source venv/bin/activate
 bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
@@ -45,9 +51,20 @@ bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --s
 deactivate
 cd ../../
 
+
+echo "Running variant_callers_pipeline..."
 cd ${pipeline_output}/variant_callers_pipeline
 source venv/bin/activate
 snakemake --profile "$profile" --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
+deactivate
+cd ../../
+
+
+echo "Running pandora1_paper pipeline..."
+cd ${pipeline_output}/pandora1_paper
+source venv/bin/activate
+bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  --keep-going || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
