@@ -64,7 +64,7 @@ cd ../../
 echo "Running pandora1_paper pipeline..."
 cd ${pipeline_output}/pandora1_paper
 source venv/bin/activate
-bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   --keep-going || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
