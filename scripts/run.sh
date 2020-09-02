@@ -41,15 +41,13 @@ cd ../../
 cd ${pipeline_output}/pandora_analysis_pipeline
 source venv/bin/activate
 bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  --stats pandora_analysis_pipeline_runtime_stats --report pandora_analysis_pipeline_report.zip \
-  || { echo 'FATAL ERROR: pandora_analysis_pipeline failed;' ; exit 1; }
+  --stats pandora_analysis_pipeline_runtime_stats || { echo 'FATAL ERROR: pandora_analysis_pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
 
 cd ${pipeline_output}/variant_callers_pipeline
 source venv/bin/activate
-snakemake --profile lsf --configfile config.pandora_paper_tag1 --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  --keep-going --stats variant_callers_pipeline_runtime_stats --report variant_callers_pipeline_report.zip \
-  || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
+snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
