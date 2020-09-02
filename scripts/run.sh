@@ -26,14 +26,14 @@ cd ../
 # run each pipeline one by one
 cd ${pipeline_output}/pangenome_variations
 source venv/bin/activate
-snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   || { echo 'FATAL ERROR: pangenome_variations pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
 
 cd ${pipeline_output}/subsampler
 source venv/bin/activate
-snakemake --profile lsf --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   || { echo 'FATAL ERROR: subsampler pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
@@ -47,7 +47,7 @@ cd ../../
 
 cd ${pipeline_output}/variant_callers_pipeline
 source venv/bin/activate
-snakemake --profile lsf --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+snakemake --profile "$profile" --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
 deactivate
 cd ../../
