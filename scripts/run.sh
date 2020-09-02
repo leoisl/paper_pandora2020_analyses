@@ -17,7 +17,7 @@ mkdir -p "$pipeline_output"
 # installation
 cd installation_pipeline
 source venv/bin/activate
-snakemake --snakefile Snakefile_setup --restart-times 0 --profile "$profile" --config zipped_input_data="$zipped_input_data" \
+snakemake --restart-times 0 --profile "$profile" --config zipped_input_data="$zipped_input_data" \
   pipeline_output="$pipeline_output" || { echo 'FATAL ERROR: installation pipeline failed;' ; exit 1; }
 deactivate
 cd ../
