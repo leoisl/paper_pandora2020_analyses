@@ -3,11 +3,11 @@
 # pipeline configuration is done by input
 if [ $# -ne 2 ]
   then
-    echo "Usage: $0 <zipped_input_data> <pipeline_output>"
+    echo "Usage: $0 <input_data_folder> <pipeline_output>"
     exit 1
 fi
 
-zipped_input_data=$1
+input_data_folder=$1
 pipeline_output=$2
 profile="lsf"
 
@@ -18,7 +18,7 @@ mkdir -p "$pipeline_output"
 echo "Running installation pipeline..."
 cd installation_pipeline
 source venv/bin/activate
-snakemake --restart-times 0 --profile "$profile" --config zipped_input_data="$zipped_input_data" \
+snakemake --restart-times 0 --profile "$profile" --config input_data_folder="$input_data_folder" \
   pipeline_output="$pipeline_output" || { echo 'FATAL ERROR: installation pipeline failed;' ; exit 1; }
 deactivate
 cd ../
