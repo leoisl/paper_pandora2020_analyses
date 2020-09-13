@@ -12,16 +12,17 @@ rule all:
         output_dir / "pandora1_paper"
 
 
-rule unzip_data:
+rule link_input_data:
     input:
-        config["zipped_input_data"]
+        config["input_data_folder"]
     output:
         directory(output_dir / "data")
     threads: 1
     resources:
-        mem_mb=16000
+        mem_mb=100
     shell:
-        "unzip {input} -d {output_dir}"
+        "ln -s {input} {output_dir}"
+localrules: link_input_data
 
 
 rule install_pangenome_variations:

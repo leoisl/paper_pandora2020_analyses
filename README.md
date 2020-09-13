@@ -20,4 +20,4 @@ cd installation_pipeline && ./setup.sh
 ## Running on the paper data on an LSF cluster:
 
 1. `git checkout pandora_paper_tag1`
-2. `scripts/submit_lsf.sh <zipped_input_data> <pipeline_output>`
+2. `scripts/submit_lsf.sh <input_data_folder> <pipeline_output>`
