@@ -37,8 +37,10 @@ if ! test -f "${flag_file}"; then
   echo "Running pangenome_variations pipeline..."
   cd ${pipeline_output}/pangenome_variations
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    || { echo 'FATAL ERROR: pangenome_variations pipeline failed;' ; exit 1; }
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.4way_old_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+    || { echo 'FATAL ERROR: pangenome_variations pipeline old basecall failed;' ; exit 1; }
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.4way_new_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  || {   echo 'FATAL ERROR: pangenome_variations pipeline new basecall failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
@@ -53,7 +55,7 @@ if ! test -f "${flag_file}"; then
   echo "Running subsampler pipeline..."
   cd ${pipeline_output}/subsampler
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.4way.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
     || { echo 'FATAL ERROR: subsampler pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -64,84 +66,65 @@ fi
 
 
 
-flag_file="${pipeline_output}/pandora_analysis_pipeline_done"
+flag_file="${pipeline_output}/pandora_analysis_pipeline_old_basecall_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora_analysis_pipeline..."
+  echo "Running pandora_analysis_pipeline old basecall..."
   cd ${pipeline_output}/pandora_analysis_pipeline
   source venv/bin/activate
-  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    || { echo 'FATAL ERROR: pandora_analysis_pipeline failed;' ; exit 1; }
+  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.4_way_old_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+    || { echo 'FATAL ERROR: pandora_analysis_pipeline old basecall failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora_analysis_pipeline"
+  echo "Skipping pandora_analysis_pipeline old basecall"
 fi
 
 
-
-flag_file="${pipeline_output}/variant_callers_pipeline_done"
+flag_file="${pipeline_output}/pandora_analysis_pipeline_new_basecall_done"
 if ! test -f "${flag_file}"; then
-  echo "Running variant_callers_pipeline..."
-  cd ${pipeline_output}/variant_callers_pipeline
+  echo "Running pandora_analysis_pipeline new basecall..."
+  cd ${pipeline_output}/pandora_analysis_pipeline
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
+  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+    || { echo 'FATAL ERROR: pandora_analysis_pipeline new basecall failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping variant_callers_pipeline"
+  echo "Skipping pandora_analysis_pipeline new basecall"
 fi
 
 
-
-flag_file="${pipeline_output}/pandora1_paper_pipeline_done"
+flag_file="${pipeline_output}/pandora1_paper_pipeline_old_basecall_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora1_paper pipeline..."
+  echo "Running pandora1_paper pipeline old basecall..."
   cd ${pipeline_output}/pandora1_paper
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+            --configfile config.pandora_paper_tag1.4_way_old_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora1_paper pipeline"
+  echo "Skipping pandora1_paper pipeline old basecall"
 fi
 
 
-
-flag_file="${pipeline_output}/pandora1_paper_pipeline_filters_done"
+flag_file="${pipeline_output}/pandora1_paper_pipeline_new_basecall_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora1_paper pipeline with filters..."
+  echo "Running pandora1_paper pipeline new basecall..."
   cd ${pipeline_output}/pandora1_paper
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_filters.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
+            --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+   || { echo 'FATAL ERROR: pandora1_paper pipeline new basecall failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora1_paper pipeline with filters"
-fi
-
-
-
-flag_file="${pipeline_output}/pandora_gene_distance_pipeline_done"
-if ! test -f "${flag_file}"; then
-  echo "Running pandora_gene_distance pipeline..."
-  cd ${pipeline_output}/pandora_gene_distance
-  source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  || { echo 'FATAL ERROR: pandora_gene_distance pipeline failed;' ; exit 1; }
-  deactivate
-  cd ../../
-  touch "${flag_file}"  # marks this pipeline as done
-else
-  echo "Skipping pandora_gene_distance pipeline"
+  echo "Skipping pandora1_paper pipeline new basecall"
 fi
 
 echo "All done!"
