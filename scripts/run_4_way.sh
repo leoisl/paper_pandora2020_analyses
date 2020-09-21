@@ -127,6 +127,4 @@ else
   echo "Skipping pandora1_paper pipeline new basecall"
 fi
 
-# TODO: add code to merge the ROCs
-
 echo "All done!"

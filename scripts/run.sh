@@ -144,9 +144,4 @@ else
   echo "Skipping pandora_gene_distance pipeline"
 fi
 
-
-# package output
-script_root="$(dirname "$(readlink -fm "$0")")"
-"$script_root"/package_output.sh "$pipeline_output"
-
 echo "All done!"
