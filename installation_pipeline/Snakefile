@@ -103,3 +103,20 @@ rule install_pandora1_paper:
         git checkout pandora_paper_tag1 && \
         ./setup.sh
         """
+
+
+
+rule install_pandora_gene_distance:
+    output:
+          directory(output_dir / "pandora_gene_distance")
+    threads: 1
+    resources:
+        mem_mb=16000
+    shell:
+        """
+        cd {output_dir} && \
+        git clone --recursive git@github.com:leoisl/pandora_gene_distance.git && \
+        cd pandora_gene_distance && \
+        git checkout pandora_paper_tag1 && \
+        ./setup.sh
+        """
