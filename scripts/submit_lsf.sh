@@ -2,7 +2,7 @@
 set -eux
 
 MEMORY=20000
-LOCAL_CORES=16
+LOCAL_CORES=20
 LOG_DIR=logs/
 JOB_NAME="pandora1_paper_full_pipeline"
 

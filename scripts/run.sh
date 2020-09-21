@@ -10,6 +10,7 @@ fi
 input_data_folder=$1
 pipeline_output=$2
 profile="lsf"
+LOCAL_CORES=20
 
 # setup
 mkdir -p "$pipeline_output"
@@ -100,11 +101,52 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora1_paper pipeline..."
   cd ${pipeline_output}/pandora1_paper
   source venv/bin/activate
-  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    --keep-going || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
+            --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
   echo "Skipping pandora1_paper pipeline"
 fi
+
+
+
+flag_file="${pipeline_output}/pandora1_paper_pipeline_filters_done"
+if ! test -f "${flag_file}"; then
+  echo "Running pandora1_paper pipeline with filters..."
+  cd ${pipeline_output}/pandora1_paper
+  source venv/bin/activate
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
+            --configfile config.pandora_filters.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
+  deactivate
+  cd ../../
+  touch "${flag_file}"  # marks this pipeline as done
+else
+  echo "Skipping pandora1_paper pipeline with filters"
+fi
+
+
+
+flag_file="${pipeline_output}/pandora_gene_distance_pipeline_done"
+if ! test -f "${flag_file}"; then
+  echo "Running pandora_gene_distance pipeline..."
+  cd ${pipeline_output}/pandora_gene_distance
+  source venv/bin/activate
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  || { echo 'FATAL ERROR: pandora_gene_distance pipeline failed;' ; exit 1; }
+  deactivate
+  cd ../../
+  touch "${flag_file}"  # marks this pipeline as done
+else
+  echo "Skipping pandora_gene_distance pipeline"
+fi
+
+
+# package output
+script_root="$(dirname "$(readlink -fm "$0")")"
+"$script_root"/package_output.sh "$pipeline_output"
+
+echo "All done!"
