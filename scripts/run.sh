@@ -85,7 +85,7 @@ if ! test -f "${flag_file}"; then
   echo "Running variant_callers_pipeline..."
   cd ${pipeline_output}/variant_callers_pipeline
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
     --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -102,7 +102,7 @@ if ! test -f "${flag_file}"; then
   cd ${pipeline_output}/pandora1_paper
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.no_nanopolish.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+            --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
   || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
