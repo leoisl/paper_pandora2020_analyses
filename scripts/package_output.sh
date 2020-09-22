@@ -24,9 +24,9 @@ ln -s "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1/plot
 ln -s "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1/plot_data/recall_per_sample_per_number_of_samples" pandora1_paper_analysis_output/recall_per_sample_per_number_of_samples
 ln -s "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1/plot_data/ROC_data.tsv" pandora1_paper_analysis_output/ROC_data_all_tools.tsv
 ln -s "${pipeline_output}/pandora1_paper/analysis_output_pandora_filters_pandora_paper_tag1/plot_data/ROC_data.tsv" pandora1_paper_analysis_output/ROC_data_pandora_only_with_filters.tsv
+ln -s "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/FP_genes" pandora1_paper_analysis_output/FP_genes
+ln -s "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/gene_distance_plots" pandora1_paper_analysis_output/gene_distance_plots
 
 # TODO: add code to merge the 4way ROCs
-
-# TODO: add gene distance plots here
 
 zip -r pandora1_paper_analysis_output.zip pandora1_paper_analysis_output
