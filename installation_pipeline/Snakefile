@@ -21,7 +21,7 @@ rule link_input_data:
     resources:
         mem_mb=100
     shell:
-        "ln -s {input} {output_dir}"
+        "ln -s {input} {output}"
 localrules: link_input_data
 
 
