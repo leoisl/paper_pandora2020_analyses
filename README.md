@@ -43,9 +43,12 @@ GT,step_GT,precision,error_rate,nb_of_correct_calls,nb_of_total_calls,sample,too
 ```
 
 Fields explanation:
-* `GT` and `step_GT`: ignore, not relevant here;
+Important fields:
 * `precision` and `error_rate`: the precision and error rate of the tool for that particular sample;
-* `nb_of_correct_calls` and `nb_of_total_calls`: raw values used to compute `precision` and `error_rate`;
 * `sample` and `tool`: the sample and tool took into consideration;
+
+Other fields:
+* `GT` and `step_GT`: ignore, not relevant here;
+* `nb_of_correct_calls` and `nb_of_total_calls`: raw values used to compute `precision` and `error_rate`;
 * `coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: details about the run;
 
