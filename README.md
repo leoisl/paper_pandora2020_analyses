@@ -43,6 +43,7 @@ GT,step_GT,precision,error_rate,nb_of_correct_calls,nb_of_total_calls,sample,too
 ```
 
 Fields explanation:
+
 Important fields:
 * `precision` and `error_rate`: the precision and error rate of the tool for that particular sample;
 * `sample` and `tool`: the sample and tool took into consideration;
