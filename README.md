@@ -168,7 +168,7 @@ Other fields:
 Data about the recall of each tool split by the pangenome variants frequency (nb of samples a pangenome variant is in).
 The recall considered here is the recall WRT pangenome variants sequences.
 
-Main file: `recall_per_nb_of_samples.plot_data.csv`
+Main file: `recall_per_nb_of_samples.plot_data.csv` (use this, don't use the unprocessed `recall_per_nb_of_samples.tsv`)
 
 Preview:
 
