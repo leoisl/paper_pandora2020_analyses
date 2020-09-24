@@ -31,8 +31,8 @@ This is a short description of each file and its fields.
 ## Preliminaries
 
 ### The different types of recall
-In many plots regarding recall, we have different ways to measure it. For all these examples, let's consider the following
-pangenome variant, which is a SNP `A -> C`, `A` is in 5 samples, `C` is in 10 samples.
+In many plots regarding recall, we have different ways to measure it. It is easier to explain them using examples, so let's
+consider the following pangenome variant, which is a SNP `A -> C`, `A` is in 5 samples, `C` is in 10 samples.
 
 Recall WRT truth probes (`recall_wrt_truth_probes`): here we don't actually work with pangenome variants, just with pairwise variants.
 Each allele of each pairwise variant becomes a truth probe.
