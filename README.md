@@ -195,6 +195,7 @@ coverage,tool,coverage_threshold,strand_bias_threshold,gaps_threshold,NB_OF_SAMP
 Fields explanation:
 
 Important fields:
+
 `tool`: the considered tool;
 `recall`: the recall WRT pangenome variants sequences;
 `NB_OF_SAMPLES` or `NUMBER_OF_SAMPLES`: these are the same, represent the recall if we look at the pangenome variants with this given frequency (nb of samples).
@@ -205,6 +206,7 @@ Can be used to do the plot with cumulative absolute counts;
 `colour`: the proposed colour for the tool when plotting;
 
 Other fields:
+
 `total_nb_of_PanVar`: total number of pangenome variations at that frequency;
 `coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: filtering options;
 
