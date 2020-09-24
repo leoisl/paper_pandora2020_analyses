@@ -100,8 +100,8 @@ PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
 
 Fields explanation:
 
-`PANGENOME_VARIATION_ID`: ignore, it is the identifier of the pangenome variation;
-`NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
+* `PANGENOME_VARIATION_ID`: ignore, it is the identifier of the pangenome variation;
+* `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
 
 
 ## precision_per_ref_per_clade
@@ -123,8 +123,8 @@ Pandora illumina no denovo,063_STEC,0.994254362790382,PRG,Pandora illumina no de
 
 Fields explanation:
 
-`tool,sample,precision,ref`: self explanatory;
-`tool_and_ref`: tool and ref concatenated
+* `tool,sample,precision,ref`: self explanatory;
+* `tool_and_ref`: tool and ref concatenated
 
 
 ## recall_per_ref_per_clade
@@ -196,19 +196,19 @@ Fields explanation:
 
 Important fields:
 
-`tool`: the considered tool;
-`recall`: the recall WRT pangenome variants sequences;
-`NB_OF_SAMPLES` or `NUMBER_OF_SAMPLES`: these are the same, represent the recall if we look at the pangenome variants with this given frequency (nb of samples).
+* `tool`: the considered tool;
+* `recall`: the recall WRT pangenome variants sequences;
+* `NB_OF_SAMPLES` or `NUMBER_OF_SAMPLES`: these are the same, represent the recall if we look at the pangenome variants with this given frequency (nb of samples).
 I forgot to remove one of them when merging dataframes;
-`nb_of_found_PanVar`: the number of pangenomes variations found. Can be used to do the plot with absolute counts;
-`cumulative_nb_of_found_PanVar`: the number of pangenomes variations found cumulatively (i.e. with `NB_OF_SAMPLES` less than the number of samples of this record).
+* `nb_of_found_PanVar`: the number of pangenomes variations found. Can be used to do the plot with absolute counts;
+* `cumulative_nb_of_found_PanVar`: the number of pangenomes variations found cumulatively (i.e. with `NB_OF_SAMPLES` less than the number of samples of this record).
 Can be used to do the plot with cumulative absolute counts;
-`colour`: the proposed colour for the tool when plotting;
+* `colour`: the proposed colour for the tool when plotting;
 
 Other fields:
 
-`total_nb_of_PanVar`: total number of pangenome variations at that frequency;
-`coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: filtering options;
+* `total_nb_of_PanVar`: total number of pangenome variations at that frequency;
+* `coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: filtering options;
 
 ## recall_per_sample_per_number_of_samples
 
@@ -230,10 +230,11 @@ Preview:
 Fields explanation:
 
 Important fields:
-`tool,coverage`: the considered tool and the read coverage we used;
-`error_rate,recalls_wrt_truth_probes,recalls_wrt_variants_where_all_allele_seqs_were_found,recalls_wrt_variants_found_wrt_alleles`: the error rate and the 3 recall measures;
-`coverage_threshold,strand_bias_threshold,gaps_threshold`: the filters that were applied;
+
+* `tool,coverage`: the considered tool and the read coverage we used;
+* `error_rate,recalls_wrt_truth_probes,recalls_wrt_variants_where_all_allele_seqs_were_found,recalls_wrt_variants_found_wrt_alleles`: the error rate and the 3 recall measures;
+* `coverage_threshold,strand_bias_threshold,gaps_threshold`: the filters that were applied;
 
 Other fields:
-`step_GT`: the genotype filtering step used. The lower (higher) the value, the more lenient (strict) the GT filtering was. 0 is unfiltered, and the max value is the max filtering we set for the pipeline;
-`nb_of_correct_calls,nb_of_total_calls,nbs_of_truth_probes_found,nbs_of_truth_probes_in_total,nbs_variants_where_all_allele_seqs_were_found,nbs_variants_found_wrt_alleles,nbs_variants_total`: fields used to compute the error rate and the recalls;
+* `step_GT`: the genotype filtering step used. The lower (higher) the value, the more lenient (strict) the GT filtering was. 0 is unfiltered, and the max value is the max filtering we set for the pipeline;
+* `nb_of_correct_calls,nb_of_total_calls,nbs_of_truth_probes_found,nbs_of_truth_probes_in_total,nbs_variants_where_all_allele_seqs_were_found,nbs_variants_found_wrt_alleles,nbs_variants_total`: fields used to compute the error rate and the recalls;
