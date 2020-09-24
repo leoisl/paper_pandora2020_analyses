@@ -127,4 +127,21 @@ else
   echo "Skipping pandora1_paper pipeline new basecall"
 fi
 
+
+flag_file="${pipeline_output}/pandora1_paper_pipeline_filters_done"
+if ! test -f "${flag_file}"; then
+  echo "Running pandora1_paper pipeline with filters..."
+  cd ${pipeline_output}/pandora1_paper
+  source venv/bin/activate
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
+            --configfile config.pandora_paper_tag1.4_way_pandora_filters.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+   || { echo 'FATAL ERROR: pandora1_paper pipeline with filters failed;' ; exit 1; }
+  deactivate
+  cd ../../
+  touch "${flag_file}"  # marks this pipeline as done
+else
+  echo "Skipping pandora1_paper pipeline with filters"
+fi
+
+
 echo "All done!"
