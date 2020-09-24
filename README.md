@@ -99,6 +99,7 @@ PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
 ```
 
 Fields explanation:
+
 `PANGENOME_VARIATION_ID`: ignore, it is the identifier of the pangenome variation;
 `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
 
@@ -121,6 +122,7 @@ Pandora illumina no denovo,063_STEC,0.994254362790382,PRG,Pandora illumina no de
 ```
 
 Fields explanation:
+
 `tool,sample,precision,ref`: self explanatory;
 `tool_and_ref`: tool and ref concatenated
 
@@ -149,7 +151,7 @@ Main file: `precision_per_sample.tsv`
 ## recall_per_sample
 
 Similar to [precision_per_sample](#precision_per_sample). It features all the three types of recall discussed on
-[The different types of recall](#The_different_types_of_recall). These values are not filtered by genotype confidence.
+[The different types of recall](#the-different-types-of-recall). These values are not filtered by genotype confidence.
 
 Main file: `recall_per_sample.tsv`
 
