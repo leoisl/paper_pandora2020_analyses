@@ -34,17 +34,28 @@ This is a short description of each file and its fields.
 In many plots regarding recall, we have different ways to measure it. For all these examples, let's consider the following
 pangenome variant, which is a SNP `A -> C`, `A` is in 5 samples, `C` is in 10 samples.
 
-Recall WRT truth probes (`recall_wrt_truth_probes`): each allele of the SNP becomes a truth probe (i.e. here we have 5 truth probes for the `A` allele and
-10 truth probes for the `C` allele), and the recall is basically how many truth probes we found over the number of total truth probes.
+Recall WRT truth probes (`recall_wrt_truth_probes`): here we don't actually work with pangenome variants, just with pairwise variants.
+Each allele of each pairwise variant becomes a truth probe.
+For e.g., here we have 5 truth probes for the `A` allele and 10 truth probes for the `C` allele, and let's say when we make all pairwise
+comparisons between the truth assemblies, we find 50 pairwise SNPs (5 samples with `A` x 10 samples with `C`). While these 50 SNPs
+can be summarised as a single pangenome variation, in this measure we don't do this deduplication. Here, we will have thus 100 truth
+probes (2 for each pairwise SNP), and recall is basically how many truth probes we found over the number of total truth probes.
+This mean that common variations are overweighted using this measure.
 
-Recall WRT pangenome variants sequences (`recall_wrt_variants_where_all_allele_seqs_were_found`): here we just look at the sequences of the pangenome variants.
-In this case, we check if any of the 5 truth probes for the `A` allele AND any of the 10 truth probes for the `C` allele were found. If yes, then we say that the
+Recall WRT pangenome variants sequences (`recall_wrt_variants_where_all_allele_seqs_were_found`): here we do deduplication of variants
+(i.e. we work with pangenome variants, instead of pairwise variants). We just look at the sequences of the pangenome variants, though.
+This means that, in the previous example, we check if any of the 5 truth probes for the `A` allele AND any of the 10 truth probes for the `C` allele were found. If yes, then we say that the
 pangenome variant has been found (it is enough to find only 1 truth probe for each allele). Otherwise (if none of the truth probes of at least one allele was not found), we say the pangenome variant has not been found.
 The recall is the number of pangenome variants found over the number of pangenome variants in total.
+Rare and common variants have the same weight here, but this measure does not reward callers that find the alleles of the pangenome variation
+(i.e. finding only 1 truth probe for the `A` allele, 1 for the `C` allele has the same reward as finding all the 5 truth probes
+for the `A` allele, and all the 15 truth probes for the `C` allele).
 
 Recall WRT pangenome variants alleles (`recall_wrt_variants_found_wrt_alleles`): here we compute the recall of each pangenome variant as the number of alleles found.
-I think calling this allele might be confusing, but let's say we found 3/5 truth probes for the `A` allele and 4/10 truth probes for the `C` allele, thus
+I think calling this "allele" might be confusing, but let's say we found 3/5 truth probes for the `A` allele and 4/10 truth probes for the `C` allele, thus
 the recall for this pangenome variant is (3+4)/(5+10) = 0.46.
+This is a balance between the two previous measures. It does not overweight common variations (all variations have a recall value in `[0, 1]`),
+and it rewards tools finding more alleles of a variant.
 
 ## enrichment_of_FPs
 
