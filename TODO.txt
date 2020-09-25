@@ -1,0 +1,14 @@
+Priority:
+    - Add the pandora_gene_distance plots/data (FP_genes and gene_distance_plots) to the package;
+    - Describe these new data in README;
+    - Add 2-SNP heatmap (csv data done, plot TODO);
+    - Ensure pipelines and backups are running fine;
+    - add recall_per_nb_of_samples to use the other recall measure;
+    - rename fields
+    - Run pandora analysis 4way with filter with illumina data
+
+Fix precision_per_ref_per_clade_medaka_pandora
+    * fix later
+
+* Split some plots that are too heavy
+    * the recall per nb of sample plots
