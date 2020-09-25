@@ -3,3 +3,5 @@
 /installation_pipeline/logs/
 /pandora_sample_data/
 .idea/
+
+venv/
