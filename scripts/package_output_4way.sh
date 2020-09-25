@@ -11,8 +11,8 @@ fi
 pipeline_output=$1
 
 mkdir -p pandora1_paper_4way_output
-sed "s/pandora/pandora_old/g" "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1_4way_old_basecall/plot_data/ROC_data.tsv" > pandora1_paper_4way_output/ROC_data_old_basecall.tsv
-sed "s/pandora/pandora_new/g" "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1_4way_new_basecall/plot_data/ROC_data.tsv" > pandora1_paper_4way_output/ROC_data_new_basecall.tsv
+sed "s/pandora/pandora_OLD_BASECALL/g" "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1_4way_old_basecall/plot_data/ROC_data.tsv" > pandora1_paper_4way_output/ROC_data_old_basecall.tsv
+sed "s/pandora/pandora_NEW_BASECALL/g" "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1_4way_new_basecall/plot_data/ROC_data.tsv" > pandora1_paper_4way_output/ROC_data_new_basecall.tsv
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 python "${script_dir}/concat_ROCs.py" pandora1_paper_4way_output/ROC_data_old_basecall.tsv pandora1_paper_4way_output/ROC_data_new_basecall.tsv --output pandora1_paper_4way_output/ROC_data_old_and_new_basecall.tsv
 cp "${pipeline_output}/pandora1_paper/analysis_output_pandora_paper_tag1_4way_new_basecall_with_filters/plot_data/ROC_data.tsv" pandora1_paper_4way_output/ROC_data_new_basecall.with_filters.tsv
