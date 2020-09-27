@@ -56,7 +56,9 @@ if ! test -f "${flag_file}"; then
   cd ${pipeline_output}/subsampler
   source venv/bin/activate
   snakemake --profile "$profile" --configfile config.pandora_paper_tag1.4way.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    || { echo 'FATAL ERROR: subsampler pipeline failed;' ; exit 1; }
+    || { echo 'FATAL ERROR: subsampler pipeline for nanopore failed;' ; exit 1; }
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.4way.illumina.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+    || { echo 'FATAL ERROR: subsampler pipeline for illumina failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
@@ -96,6 +98,21 @@ else
 fi
 
 
+flag_file="${pipeline_output}/pandora_analysis_pipeline_illumina_done"
+if ! test -f "${flag_file}"; then
+  echo "Running pandora_analysis_pipeline illumina..."
+  cd ${pipeline_output}/pandora_analysis_pipeline
+  source venv/bin/activate
+  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.4_way_illumina.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+    || { echo 'FATAL ERROR: pandora_analysis_pipeline illumina failed;' ; exit 1; }
+  deactivate
+  cd ../../
+  touch "${flag_file}"  # marks this pipeline as done
+else
+  echo "Skipping pandora_analysis_pipeline illumina"
+fi
+
+
 flag_file="${pipeline_output}/pandora1_paper_pipeline_old_basecall_done"
 if ! test -f "${flag_file}"; then
   echo "Running pandora1_paper pipeline old basecall..."
@@ -118,7 +135,7 @@ if ! test -f "${flag_file}"; then
   cd ${pipeline_output}/pandora1_paper
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+                --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
    || { echo 'FATAL ERROR: pandora1_paper pipeline new basecall failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -141,6 +158,22 @@ if ! test -f "${flag_file}"; then
   touch "${flag_file}"  # marks this pipeline as done
 else
   echo "Skipping pandora1_paper pipeline with filters"
+fi
+
+
+flag_file="${pipeline_output}/pandora1_paper_pipeline_filters_illumina_done"
+if ! test -f "${flag_file}"; then
+  echo "Running pandora1_paper pipeline with filters for illumina..."
+  cd ${pipeline_output}/pandora1_paper
+  source venv/bin/activate
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
+            --configfile config.pandora_paper_tag1.4_way_pandora_filters.illumina.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+   || { echo 'FATAL ERROR: pandora1_paper pipeline with filters for illumina failed;' ; exit 1; }
+  deactivate
+  cd ../../
+  touch "${flag_file}"  # marks this pipeline as done
+else
+  echo "Skipping pandora1_paper pipeline with filters for illumina"
 fi
 
 
