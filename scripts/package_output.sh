@@ -2,15 +2,15 @@
 set -eu
 
 # configuration is done by input
-if [ $# -ne 2 ]
+if [ $# -ne 1 ]
   then
-    echo "Usage: $0 <pipeline_output> <name_of_the_output_package>"
+    echo "Usage: $0 <pipeline_output>"
     exit 1
 fi
 
 pipeline_output=$1
-output_dir=$2
 
+output_dir="pandora1_paper_analysis_output_20_way"
 mkdir -p "${output_dir}"
 
 # pangenome variations
@@ -48,3 +48,4 @@ done
 
 
 zip -r "${output_dir}.zip" "${output_dir}"
+echo "Package available at ${output_dir}.zip"
