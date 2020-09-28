@@ -1,11 +1,17 @@
 Priority:
-    - Get ROC 4way with filter on illumina data;
+    - Ensure pipelines and backups are running fine;
     - Run ROC pipeline with the chosen filters for all tools;
+        - Running...
+
+Tomorrow:
+    - add recall_per_nb_of_samples to use the other recall measure;
     - Describe the new data in README;
         - Update the truth probes description in the README
-    - add recall_per_nb_of_samples to use the other recall measure;
-    - rename fields
-    - Ensure pipelines and backups are running fine;
+
+Wednesday meeting:
+    - Replot stuff in R or rename fields
+    - Go through pandora1_paper issues
+    - Paper writing
 
 Fix precision_per_ref_per_clade_medaka_pandora
     * fix later
@@ -16,6 +22,8 @@ Done:
     - Add 2-SNP heatmap;
     - Add the pandora_gene_distance plots/data (FP_genes and gene_distance_plots) to the package;
     - Add 2-SNP heatmap to the package
+    - Get ROC 4way with filter on illumina data;
+
 
 After paper:
     * Split some plots that are too heavy
