@@ -1,22 +1,31 @@
 Priority:
     - Ensure pipelines and backups are running fine;
-    - Run ROC pipeline with the chosen filters for all tools;
-        - Running...
+        - Checking 4-way backups...
 
-Tomorrow:
+
+TODO:
+Thursday/Friday:
+    - Fix precision_per_ref_per_clade_medaka_pandora
     - add recall_per_nb_of_samples to use the other recall measure;
+        - Recreating plots for the filtered results
+    - Release last package
+
     - Describe the new data in README;
         - Update the truth probes description in the README
+    - solve https://github.com/iqbal-lab/pandora1_paper/issues/216
+        - Rerun pandora_analysis pipeline
 
-Wednesday meeting:
-    - Replot stuff in R or rename fields
     - Go through pandora1_paper issues
-    - Paper writing
+    - Update R scripts
 
-Fix precision_per_ref_per_clade_medaka_pandora
-    * fix later
+TODO next week:
+    - Paper writing
+    - Remove recall column from recall_per_nb_of_samples_pvr.plot_data.csv
+
+
 
 Recheck the 4way/20way run scripts
+recheck pangenome vars and other stuff again
 
 Done:
     - Add 2-SNP heatmap;
