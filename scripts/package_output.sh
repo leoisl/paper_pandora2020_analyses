@@ -34,7 +34,6 @@ for technology in "${technologies[@]}"; do
     cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_ref_per_clade"                   "${output_dir}/${technology}_analysis${filter}/recall_per_ref_per_clade"
     cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_ref_per_nb_of_samples_per_clade" "${output_dir}/${technology}_analysis${filter}/recall_per_ref_per_nb_of_samples_per_clade"
     cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_sample"                          "${output_dir}/${technology}_analysis${filter}/recall_per_sample"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_sample_per_number_of_samples"    "${output_dir}/${technology}_analysis${filter}/recall_per_sample_per_number_of_samples"
     cp -v "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/ROC_data.tsv"                               "${output_dir}/${technology}_analysis${filter}/ROC_data.tsv"
 
     # pandora_gene_distance
@@ -51,5 +50,23 @@ for technology in "${technologies[@]}"; do
 done
 
 
+# remove uninteresting csvs
+rm -v "${output_dir}/illumina_analysis/FP_genes/pandora_illumina_100x_nodenovo/gene_and_nb_of_FPs_counted.csv"
+rm -v "${output_dir}/illumina_analysis/FP_genes/pandora_illumina_100x_withdenovo/gene_and_nb_of_FPs_counted.csv"
+rm -v "${output_dir}/nanopore_analysis/FP_genes/pandora_nanopore_100x_nodenovo/gene_and_nb_of_FPs_counted.csv"
+rm -v "${output_dir}/nanopore_analysis/FP_genes/pandora_nanopore_100x_withdenovo/gene_and_nb_of_FPs_counted.csv"
+
+rm -v "${output_dir}/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
+rm -v "${output_dir}/illumina_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
+rm -v "${output_dir}/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
+rm -v "${output_dir}/nanopore_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
+
+rm -v "${output_dir}/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
+rm -v "${output_dir}/illumina_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
+rm -v "${output_dir}/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
+rm -v "${output_dir}/nanopore_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
+
+
+# create the package
 zip -r "${output_dir}.zip" "${output_dir}"
 echo "Package available at ${output_dir}.zip"
