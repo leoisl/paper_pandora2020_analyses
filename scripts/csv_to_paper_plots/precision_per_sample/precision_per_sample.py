@@ -33,7 +33,7 @@ df2["tool"] = [s.split()[0].lower() for s in df2["tool"] if "no denovo" not in s
 ontdf = pd.concat([df1, df2])
 ontdf["sample"] = [s.replace("Escherichia_coli_", "") for s in ontdf["sample"]]
 
-fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(15, 9), dpi=300)
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(14, 6), dpi=100)
 x = "sample"
 y = "precision"
 hue = "tool"

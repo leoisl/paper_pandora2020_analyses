@@ -1,7 +1,7 @@
 library("ggplot2")
 
 
-png(file="ROC_data_20_way_illumina.R_data.png", width=1000, height=500)
+png(file="ROC_data_20_way_illumina.R_data.png", width=700, height=500)
 
 df <- read.csv("ROC_data_20_way_illumina.R_data.csv", header=TRUE)
 
