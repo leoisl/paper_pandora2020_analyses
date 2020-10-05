@@ -30,5 +30,4 @@ four_way_df["local_assembly"] = four_way_df["tool"].apply(lambda tool: "yes" if 
 # plot with R
 four_way_df.to_csv("ROC_data_old_and_new_basecall.R_data.csv")
 os.system("Rscript plot_ROC_4way.R")
-os.remove("ROC_data_old_and_new_basecall.R_data.csv")
 
