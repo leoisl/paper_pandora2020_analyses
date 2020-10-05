@@ -5,3 +5,7 @@
 .idea/
 
 venv/
+
+scripts/csv_to_paper_plots/4wayROC/notebook/.ipynb_checkpoints/
+
+scripts/csv_to_paper_plots/20wayROC/notebook/.ipynb_checkpoints/
