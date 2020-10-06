@@ -14,3 +14,4 @@ ggplot(data=four_way_df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alle
   ylab("Average Allelic Recall") +
   xlab("Error Rate")
 
+dev.off()

@@ -3,9 +3,9 @@ library("ggplot2")
 
 png(file="ROC_data_20_way_nanopore.R_data.png", width=700, height=500)
 
-df <- read.csv("ROC_data_20_way_nanopore.R_data.csv", header=TRUE)
+nanopore_20_way_df <- read.csv("ROC_data_20_way_nanopore.R_data.csv", header=TRUE)
 
-ggplot(data=df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
+ggplot(data=nanopore_20_way_df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
                              group=tool_long_name, colour=tool)) +
   geom_line() +
   scale_colour_manual(values = c("pandora no denovo"="red", "pandora with denovo"="blue",
@@ -16,3 +16,4 @@ ggplot(data=df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
   ylab("Average Allelic Recall") +
   xlab("Error Rate")
 
+dev.off()
