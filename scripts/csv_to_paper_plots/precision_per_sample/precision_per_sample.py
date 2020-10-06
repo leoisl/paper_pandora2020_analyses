@@ -57,7 +57,7 @@ sns.boxenplot(
     showfliers=False,
     k_depth="full",
 )
-ax[0].set(ylabel="Precision", xlabel="Sample", title="Illumina")
+ax[0].set(ylabel="Precision", xlabel="Sample", title="")
 
 sns.pointplot(
     data=ontdf.query("tool == 'pandora'"),
@@ -77,7 +77,7 @@ sns.boxenplot(
     showfliers=False,
     k_depth="full",
 )
-ax[1].set(xlabel="Sample", title="Nanopore", ylabel="")
+ax[1].set(xlabel="Sample", title="", ylabel="")
 
 for axis in ax:
     # Turn on the minor TICKS, which are required for the minor GRID
