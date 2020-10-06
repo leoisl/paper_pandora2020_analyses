@@ -12,7 +12,7 @@ ggplot(precision_per_sample_illumina_df, aes(x = sample, y = precision)) +
   scale_colour_manual(values = c("pandora"="blue", "snippy"="darkgreen", samtools="purple")) +
   ylab("Precision") +
   xlab("Sample") +
-  theme(text = element_text(size=15), axis.text.x = element_text(angle = 45), legend.position=c(0.95,0.23))
+  theme(text = element_text(size=20), axis.text.x = element_text(angle = 45), legend.position=c(0.95,0.23))
 
 dev.off()
 
@@ -27,7 +27,7 @@ ggplot(precision_per_sample_nanopore_df, aes(x = sample, y = precision)) +
                aes(group = interaction(sample, tool), colour=tool)) +
   geom_line(data = precision_per_sample_nanopore_df[precision_per_sample_nanopore_df$tool == "pandora", ], aes(group=tool, colour=tool)) +
   scale_colour_manual(values = c("pandora"="blue", "medaka"="orange", "nanopolish"="pink")) +
-  theme(text = element_text(size=15), axis.text.x = element_text(angle = 45), legend.position=c(0.95,0.23)) +
+  theme(text = element_text(size=20), axis.text.x = element_text(angle = 45), legend.position=c(0.95,0.23)) +
   ylab("Precision") +
   xlab("Sample")
 
