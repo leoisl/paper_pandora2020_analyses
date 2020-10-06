@@ -11,7 +11,8 @@ ggplot(data=df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
   scale_colour_manual(values = c("pandora no denovo"="red", "pandora with denovo"="blue",
                                  "medaka"="orange", "nanopolish"="pink")) +
   theme(text = element_text(size=20), legend.position=c(0.85,0.2)) +
-  xlim(0.0, 0.2) + 
+  xlim(0.0, 0.2) +
+  ylim(0.65, 0.90) +
   ylab("Average Allelic Recall") +
   xlab("Error Rate")
 

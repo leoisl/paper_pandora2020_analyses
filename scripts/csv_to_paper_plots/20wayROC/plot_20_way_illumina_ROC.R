@@ -12,6 +12,7 @@ ggplot(data=df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
                                  "snippy"="darkgreen", samtools="purple")) +
   scale_x_continuous(breaks= seq(0,1,by=0.003)) +
   theme(text = element_text(size=20), legend.position=c(0.85,0.2)) +
+  ylim(0.65, 0.90) +
   ylab("Average Allelic Recall") +
   xlab("Error Rate")
 
