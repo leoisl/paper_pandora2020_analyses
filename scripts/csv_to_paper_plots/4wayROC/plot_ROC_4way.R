@@ -1,17 +1,24 @@
-library("ggplot2")
+library(ggplot2)
+library(data.table)
+library(ggthemr)
 
-png(file="ROC_data_old_and_new_basecall.png", width=1000, height=500)
-four_way_df <- read.csv("ROC_data_old_and_new_basecall.R_data.csv", header=TRUE)
+# Read in data 
+#four_way_df <- fread("4wayROC/ROC_data_old_and_new_basecall.R_data.csv", header=TRUE, sep=",")
+four_way_df <- fread("ROC_data_old_and_new_basecall.R_data.csv", header=TRUE, sep=",")
 
-ggplot(data=four_way_df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
-                             group=tool, linetype=methylation_aware, colour=local_assembly)) +
-  geom_line() +
-  scale_colour_manual(values = c("no"="red", "yes"="blue")) +
-  scale_linetype_manual(values = c("no"="dashed", "yes"="solid")) + 
-  scale_x_continuous(breaks= seq(0,1,by=0.001)) +
-  scale_y_continuous(breaks= seq(0,1,by=0.02)) +
-  theme(text = element_text(size=20), legend.position=c(0.85,0.2)) +
-  ylab("Average Allelic Recall") +
-  xlab("Error Rate")
+ggthemr('fresh')
 
-dev.off()
+four_way_plot = ggplot(data=four_way_df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
+                                             group=tool, linetype=methylation_aware, colour=local_assembly)) +
+  geom_line() + 
+  scale_x_continuous("Error rate", limits = c(0.0035,0.007), breaks= seq(0.0035,0.007,by=0.0005)) +
+  scale_y_continuous("Average allelic recall", limits = c(0.75, 0.91), breaks= seq(0.75,0.91,by=0.05)) +
+  theme(legend.title = element_text(size = 8), 
+        legend.text = element_text(size = 8)) +
+  theme(legend.position = "bottom")
+
+four_way_plot$labels$linetype = "Methylation aware"
+four_way_plot$labels$colour = expression(paste(italic("De novo"), " discovery"))
+
+ggsave(four_way_plot, file="ROC_data_old_and_new_basecall.png", width=6.5, height=5, dpi=300)
+
