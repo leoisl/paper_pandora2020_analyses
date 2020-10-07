@@ -5,13 +5,12 @@
 
 
 import pandas as pd
-import os
 
 
 # In[2]:
 
 import sys
-df = pd.read_csv(sys.argv[1], sep="\t")
+df = pd.read_csv("../pandora1_paper_analysis_output_20_way/nanopore_analysis/ROC_data.tsv", sep="\t")
 df
 
 
@@ -36,6 +35,6 @@ df
 # In[4]:
 
 
-# run R script
+# save csv
 df.to_csv("ROC_data_20_way_nanopore.R_data.csv")
-os.system("Rscript plot_20_way_nanopore_ROC.R")
+

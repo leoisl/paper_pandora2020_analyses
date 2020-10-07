@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 
 csvfile = "../pandora1_paper_analysis_output_20_way/illumina_analysis/precision_per_ref_per_clade/precision_per_ref_per_clade_samtools_pandora.csv"
 df1 = pd.read_csv(csvfile)
@@ -31,4 +30,4 @@ ontdf = pd.concat([df1, df2])
 ontdf["sample"] = [s.replace("Escherichia_coli_", "") for s in ontdf["sample"]]
 ontdf.to_csv("precision_per_sample_nanopore.csv", index=False)
 
-os.system("Rscript precision_per_sample.R")
+
