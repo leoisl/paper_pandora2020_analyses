@@ -21,18 +21,15 @@ fi
 mkdir -p paper_plots
 
 echo "Generating Figure 5..."
-cd 4wayROC && python plot_ROC_4way.py             ../pandora1_paper_analysis_output_4_way/ROC_data_old_and_new_basecall.tsv && cd ..
+cd 4wayROC && bash produce_figure.sh && cd ..
 cp 4wayROC/ROC_data_old_and_new_basecall.png paper_plots/Figure5.png
 
 echo "Generating Figure 6..."
-cd 20wayROC && python plot_20_way_illumina_ROC.py ../pandora1_paper_analysis_output_20_way/illumina_analysis/ROC_data.tsv && cd ..
-cd 20wayROC && python plot_20_way_nanopore_ROC.py ../pandora1_paper_analysis_output_20_way/nanopore_analysis/ROC_data.tsv && cd ..
-cd precision_per_sample && python precision_per_sample.py && cd ..
-cd Figure6 && Rscript Figure6.R && cd ..
+cd Figure6 && bash produce_figure.sh && cd ..
 cp Figure6/Figure6.png paper_plots/Figure6.png
 
 echo "Generating Figure 8..."
-cd Figure8 && bash produce_Figure8.sh && cd ..
+cd Figure8 && bash produce_figure.sh && cd ..
 cp Figure8/Figure8.png paper_plots/Figure8.png
 
 echo "All done! See dir paper_plots"
