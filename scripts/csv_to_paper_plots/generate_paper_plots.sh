@@ -31,4 +31,8 @@ cd precision_per_sample && python precision_per_sample.py && cd ..
 cd Figure6 && Rscript Figure6.R && cd ..
 cp Figure6/Figure6.png paper_plots/Figure6.png
 
+echo "Generating Figure 8..."
+cd Figure8 && bash produce_Figure8.sh && cd ..
+cp Figure8/Figure8.png paper_plots/Figure8.png
+
 echo "All done! See dir paper_plots"
