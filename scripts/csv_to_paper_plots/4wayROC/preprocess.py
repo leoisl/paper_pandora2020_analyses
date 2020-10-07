@@ -13,7 +13,7 @@ import os
 
 # read df
 import sys
-four_way_df = pd.read_csv(sys.argv[1], sep="\t")
+four_way_df = pd.read_csv("../pandora1_paper_analysis_output_4_way/ROC_data_old_and_new_basecall.tsv", sep="\t")
 
 
 # In[3]:

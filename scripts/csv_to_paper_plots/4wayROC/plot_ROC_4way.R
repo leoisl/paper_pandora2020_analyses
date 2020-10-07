@@ -3,7 +3,6 @@ library(data.table)
 library(ggthemr)
 
 # Read in data 
-#four_way_df <- fread("4wayROC/ROC_data_old_and_new_basecall.R_data.csv", header=TRUE, sep=",")
 four_way_df <- fread("ROC_data_old_and_new_basecall.R_data.csv", header=TRUE, sep=",")
 
 ggthemr('fresh')
