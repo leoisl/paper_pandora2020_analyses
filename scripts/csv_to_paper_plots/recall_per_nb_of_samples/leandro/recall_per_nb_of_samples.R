@@ -18,7 +18,7 @@ ggplot(df_illumina, aes(x=NUMBER_OF_SAMPLES, y=nb_of_found_PanVar, fill=tool)) +
             inherit.aes = FALSE, size=0.5, group = 1, linetype = "dashed") +
   scale_fill_manual(values=c("#7BA151FF", "#B8DE29FF")) +
   theme(text = element_text(size=20)) +
-  ylim(0, 70000) +
+  ylim(0, 80000) +
   ylab("Number of Pan-variants found") +
   xlab("Number of Samples")
 
@@ -75,7 +75,7 @@ ggplot(df_nanopore, aes(x=NUMBER_OF_SAMPLES, y=nb_of_found_PanVar, fill=tool)) +
             inherit.aes = FALSE, size=0.5, group = 1, linetype = "dashed") +
   scale_fill_manual(values=c("#440154FF", "#453781CF")) +
   theme(text = element_text(size=20)) +
-  ylim(0, 70000) +
+  ylim(0, 80000) +
   ylab("Number of Pan-variants found") +
   xlab("Number of Samples")
 
