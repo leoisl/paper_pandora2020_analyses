@@ -36,4 +36,8 @@ echo "Generating Figure 8..."
 cd Figure8 && bash produce_figure.sh && cd ..
 cp Figure8/Figure8.png paper_plots/Figure8.png
 
+echo "Generating Figure 10..."
+cd Figure10 && bash produce_figure.sh && cd ..
+cp Figure10/Figure10.sample_gene_pairs_within_1perc_distance_gene_count_up_to_20.nanopore.png paper_plots/Figure10.png
+
 echo "All done! See dir paper_plots"
