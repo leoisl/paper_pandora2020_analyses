@@ -28,6 +28,7 @@ echo "Generating Figure 6..."
 cd Figure6 && bash produce_figure.sh && cd ..
 cp Figure6/Figure6.png paper_plots/Figure6.png
 cp Figure6/Figure6_supplementary.png paper_plots/SupplementaryFigureA2.png
+cp Figure6/ROC_with_PVR_Supplementary.png paper_plots/SupplementaryFigureA3.png
 
 echo "Generating Figure 7..."
 cd recall_per_nb_of_samples && bash produce_figure.sh && cd ..

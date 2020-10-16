@@ -43,3 +43,10 @@ Rscript Figure6.R \
   precision_per_sample_illumina_with_filters.csv \
   precision_per_sample_nanopore_with_filters.csv \
   Figure6_supplementary.png
+
+
+# produce ROC with PVR (Supplementary)
+Rscript ROC_with_PVR_Supplementary.R \
+  ROC_data_20_way_illumina.R_data.csv \
+  ROC_data_20_way_nanopore.R_data.csv \
+  ROC_with_PVR_Supplementary.png
