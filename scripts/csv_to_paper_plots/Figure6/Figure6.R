@@ -12,10 +12,11 @@ library(gridExtra)
 #=====================
 # Read in data
 #=====================
-illumina_20_way_df <- fread("ROC_data_20_way_illumina.R_data.csv", header=T, sep=",")
-nanopore_20_way_df <- fread("ROC_data_20_way_nanopore.R_data.csv",header=T, sep=",")
-precision_per_sample_illumina_df <- read.csv("precision_per_sample_illumina.csv", header=TRUE)
-precision_per_sample_nanopore_df <- read.csv("precision_per_sample_nanopore.csv", header=TRUE)
+args <- commandArgs(trailingOnly=TRUE)
+illumina_20_way_df <- fread(args[1], header=T, sep=",")
+nanopore_20_way_df <- fread(args[2],header=T, sep=",")
+precision_per_sample_illumina_df <- read.csv(args[3], header=TRUE)
+precision_per_sample_nanopore_df <- read.csv(args[4], header=TRUE)
 
 tool_palette <-fread("tool_palette.csv",header=T, sep=",")
 
@@ -176,4 +177,4 @@ bottom_half_fig = grid.arrange(arrangeGrob(illumina_precision_plot,
                                            nrow=1))
 final_plot = grid.arrange(top_half_fig, bottom_half_fig)
 
-ggsave(final_plot, file="Figure6.png", width=15, height=10, dpi=300)
+ggsave(final_plot, file=args[5], width=15, height=10, dpi=300)

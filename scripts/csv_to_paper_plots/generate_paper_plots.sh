@@ -27,6 +27,7 @@ cp 4wayROC/ROC_data_old_and_new_basecall.png paper_plots/Figure5.png
 echo "Generating Figure 6..."
 cd Figure6 && bash produce_figure.sh && cd ..
 cp Figure6/Figure6.png paper_plots/Figure6.png
+cp Figure6/Figure6_supplementary.png paper_plots/SupplementaryFigureA2.png
 
 echo "Generating Figure 7..."
 cd recall_per_nb_of_samples && bash produce_figure.sh && cd ..
