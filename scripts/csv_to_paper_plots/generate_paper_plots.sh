@@ -33,6 +33,7 @@ cp Figure6/ROC_with_PVR_Supplementary.png paper_plots/SupplementaryFigureA3.png
 echo "Generating Figure 7..."
 cd recall_per_nb_of_samples && bash produce_figure.sh && cd ..
 cp recall_per_nb_of_samples/leandro/Figure7.png paper_plots/Figure7.png
+cp recall_per_nb_of_samples/leandro/SupplementaryFigureA5.png paper_plots/SupplementaryFigureA5.png
 
 echo "Generating Figure 8..."
 cd Figure8 && bash produce_figure.sh && cd ..

@@ -125,14 +125,12 @@ library(png)
 library(grid)
 library(gridExtra)
 
-png(file="Figure7.png", width=1400, height=1200)
+png(file="Figure7.png", width=1400, height=800)
 
 absolute_counts_illumina <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.illumina.nb_of_found_panvars.png"))
 pvr_illumina <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.illumina.recall_PVR.png"))
-avgar_illumina <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.illumina.recall_AvgAR.png"))
 absolute_counts_nanopore <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.nanopore.nb_of_found_panvars.png"))
 pvr_nanopore <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.nanopore.recall_PVR.png"))
-avgar_nanopore <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.nanopore.recall_AvgAR.png"))
 
 
 gridExtra::grid.arrange(
@@ -140,8 +138,21 @@ gridExtra::grid.arrange(
   arrangeGrob(absolute_counts_nanopore, top = textGrob("B",  x = 0.05, gp=gpar(fontsize=30))),
   arrangeGrob(pvr_illumina, top = textGrob("C",  x = 0.05, gp=gpar(fontsize=30))),
   arrangeGrob(pvr_nanopore, top = textGrob("D",  x = 0.05, gp=gpar(fontsize=30))),
-  arrangeGrob(avgar_illumina, top = textGrob("E",  x = 0.05, gp=gpar(fontsize=30))),
-  arrangeGrob(avgar_nanopore, top = textGrob("F",  x = 0.05, gp=gpar(fontsize=30))),
+  ncol=2
+  )
+
+dev.off()
+
+
+png(file="SupplementaryFigureA5.png", width=1400, height=400)
+
+avgar_illumina <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.illumina.recall_AvgAR.png"))
+avgar_nanopore <- grid::rasterGrob(readPNG("recall_per_nb_of_samples.nanopore.recall_AvgAR.png"))
+
+
+gridExtra::grid.arrange(
+  arrangeGrob(avgar_illumina, top = textGrob("A",  x = 0.05, gp=gpar(fontsize=30))),
+  arrangeGrob(avgar_nanopore, top = textGrob("B",  x = 0.05, gp=gpar(fontsize=30))),
   ncol=2
   )
 
