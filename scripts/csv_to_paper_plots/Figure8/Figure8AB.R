@@ -18,7 +18,7 @@ ref_colouring <- c(
   "MRSN346595" = "#e735f32b",
 
   # B1
-  "S21" = "#002fff2b",
+  "S21" = "#FFA5002b",
   
   # B2
   "NCTC_13441" = "#d4f7ffff",
