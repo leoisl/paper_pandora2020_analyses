@@ -42,4 +42,8 @@ echo "Generating Figure 10..."
 cd Figure10 && bash produce_figure.sh && cd ..
 cp Figure10/Figure10.sample_gene_pairs_within_1perc_distance_gene_count_up_to_20.nanopore.png paper_plots/Figure10.png
 
+echo "Generating Supplementary Figure A.4"
+cd gene_classification && bash produce_figure.sh && cd ..
+cp gene_classification/gene_classification.png paper_plots/SupplementaryFigureA4.png
+
 echo "All done! See dir paper_plots"
