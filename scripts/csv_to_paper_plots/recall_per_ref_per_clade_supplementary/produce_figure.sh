@@ -1,0 +1,6 @@
+set -eux
+python preprocess.py
+Rscript clade_plots.R recall_per_ref_per_clade_samtools_pandora.simplified.csv 0.75 recall_per_ref_per_clade_samtools_pandora.png
+Rscript clade_plots.R recall_per_ref_per_clade_snippy_pandora.simplified.csv 0.75 recall_per_ref_per_clade_snippy_pandora.png
+Rscript clade_plots.R recall_per_ref_per_clade_medaka_pandora.simplified.csv 0.75 recall_per_ref_per_clade_medaka_pandora.png
+Rscript clade_plots.R recall_per_ref_per_clade_nanopolish_pandora.simplified.csv 0.75 recall_per_ref_per_clade_nanopolish_pandora.png

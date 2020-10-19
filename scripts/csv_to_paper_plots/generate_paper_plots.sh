@@ -47,4 +47,11 @@ echo "Generating Supplementary Figure A.4"
 cd gene_classification && bash produce_figure.sh && cd ..
 cp gene_classification/gene_classification.png paper_plots/SupplementaryFigureA4.png
 
+echo "Generating Supplementary Figure A.6-9"
+cd recall_per_ref_per_clade_supplementary && bash produce_figure.sh && cd ..
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_snippy_pandora.png paper_plots/SupplementaryFigureA6.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_samtools_pandora.png paper_plots/SupplementaryFigureA7.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_medaka_pandora.png paper_plots/SupplementaryFigureA8.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_nanopolish_pandora.png paper_plots/SupplementaryFigureA9.png
+
 echo "All done! See dir paper_plots"
