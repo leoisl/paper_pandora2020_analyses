@@ -1,24 +1,24 @@
 {
-    "id": "26A10ED1",
+    "id": "AD8AEA87",
     "path": "~/gdrive/projects/pandora/pandora1_paper_full_pipeline/scripts/csv_to_paper_plots/Figure6/Figure6.R",
     "project_path": "Figure6/Figure6.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1603203346505.0,
+    "created": 1603209050278.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 2,
     "properties": {
-        "cursorPosition": "177,30",
-        "scrollLine": "173"
+        "cursorPosition": "172,0",
+        "scrollLine": "166"
     },
     "folds": "",
     "lastKnownWriteTime": 1603205795,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1603205795442,
+    "last_content_update": 1603205795,
     "read_only": false,
     "read_only_alternatives": []
 }
