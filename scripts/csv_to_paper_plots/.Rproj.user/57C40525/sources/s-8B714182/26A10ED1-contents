@@ -46,7 +46,8 @@ illumina_20_way_plot <-ggplot(data=illumina_20_way_df,
                      limits = c(0.65, 0.9), 
                      breaks= seq(0.65, 0.9, by=0.05)) +
   scale_color_manual(values= c(illumina_colour_palette)) +
-  theme(legend.position = "None") 
+  theme(legend.position = "None") + 
+  labs(tag="A")
 
 #=====================
 # Nanopore 20 way plot
@@ -70,7 +71,8 @@ nanopore_20_way_plot <-ggplot(data=nanopore_20_way_df,
                      limits = c(0.65, 0.9), 
                      breaks= seq(0.65, 0.9, by=0.05)) +
   scale_color_manual(values= c(nanopore_colour_palette)) +
-  theme(legend.position = "None")
+  theme(legend.position = "None") + 
+  labs(tag="B")
 
 #=========================
 # Illumina precision plot
@@ -101,7 +103,8 @@ illumina_precision_plot = ggplot(precision_per_sample_illumina_df,
   theme(axis.text.x = element_text(angle = 45, hjust =1)) +
   ylab("Precision") +
   xlab("Sample") +
-  theme(legend.position = "None")
+  theme(legend.position = "None") + 
+  labs(tag="C")
 
 
 
@@ -134,7 +137,8 @@ nanopore_precision_plot = ggplot(precision_per_sample_nanopore_df,
   theme(axis.text.x = element_text(angle = 45, hjust =1)) +
   ylab("Precision") +
   xlab("Sample") +
-  theme(legend.position = "None")
+  theme(legend.position = "None") + 
+  labs(tag="D")
 
 
 #=================
@@ -158,7 +162,8 @@ custom_legend_plot <-ggplot(data=custom_legend_df,
                                expression(paste("pandora ", italic("de novo"))), 
                                "samtools", "snippy")) +
   theme(legend.position = "bottom", legend.title = element_blank())+ 
-  guides(colour = guide_legend(nrow = 1,reverse = TRUE))
+  guides(colour = guide_legend(nrow = 1,reverse = TRUE)) +
+  labs("")
   
 
 
