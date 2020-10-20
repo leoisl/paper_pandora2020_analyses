@@ -49,4 +49,6 @@ Rscript Figure6.R \
 Rscript ROC_with_PVR_Supplementary.R \
   ROC_data_20_way_illumina.R_data.csv \
   ROC_data_20_way_nanopore.R_data.csv \
+  ROC_data_20_way_illumina_with_filters.R_data.csv \
+  ROC_data_20_way_nanopore_with_filters.R_data.csv \
   ROC_with_PVR_Supplementary.png
