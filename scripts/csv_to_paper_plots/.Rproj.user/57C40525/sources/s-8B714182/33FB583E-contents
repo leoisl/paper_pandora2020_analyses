@@ -13,12 +13,12 @@ library(gridExtra)
 # Read in data
 #=====================
 args <- commandArgs(trailingOnly=TRUE)
-illumina_20_way_df <- fread(args[1], header=TRUE, sep=",")
-nanopore_20_way_df <- fread(args[2],header=TRUE, sep=",")
-precision_per_sample_illumina_df <- read.csv(args[3], header=TRUE, sep=",")
-precision_per_sample_nanopore_df <- read.csv(args[4], header=TRUE, sep=",")
+illumina_20_way_df <- fread(args[1], header=T, sep=",")
+nanopore_20_way_df <- fread(args[2],header=T, sep=",")
+precision_per_sample_illumina_df <- read.csv(args[3], header=TRUE)
+precision_per_sample_nanopore_df <- read.csv(args[4], header=TRUE)
 
-tool_palette <-fread("tool_palette.csv",header=TRUE, sep=",")
+tool_palette <-fread("tool_palette.csv",header=T, sep=",")
 
 ggthemr('fresh')
 
@@ -140,7 +140,7 @@ nanopore_precision_plot = ggplot(precision_per_sample_nanopore_df,
 #=================
 # Custom legend
 #=================
-custom_legend_df <-rbind(illumina_20_way_df, nanopore_20_way_df)
+custom_legend_df <-illumina_20_way_df
 
 custom_legend_plot <-ggplot(data=custom_legend_df, 
                             aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
@@ -157,9 +157,7 @@ custom_legend_plot <-ggplot(data=custom_legend_df,
                      labels= c("medaka", "nanopolish", "pandora", 
                                expression(paste("pandora ", italic("de novo"))), 
                                "samtools", "snippy")) +
-  theme(legend.position = "bottom", legend.title = element_blank())+ 
-  guides(colour = guide_legend(nrow = 1,reverse = TRUE))
-  
+  theme(legend.position = "bottom", legend.title = element_blank())+ guides(colour = guide_legend(nrow = 1))
 
 
 g_legend<-function(a.gplot){
