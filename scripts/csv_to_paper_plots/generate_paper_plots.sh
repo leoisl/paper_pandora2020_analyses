@@ -55,4 +55,8 @@ cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_medaka_pandor
 cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_nanopolish_pandora.png paper_plots/SupplementaryFigureA9.png
 cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.png paper_plots/SupplementaryFigureA10.png
 
+echo "Generating Supplementary Animation 2"
+cd supplementary_animation_2 && bash produce_figure.sh && cd ..
+cp supplementary_animation_2/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.gif paper_plots/SupplementaryAnimation2.gif
+
 echo "All done! See dir paper_plots"
