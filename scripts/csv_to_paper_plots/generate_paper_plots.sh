@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-package_20_way_URL="https://www.dropbox.com/s/dan82zlh9vwdqqo/pandora1_paper_analysis_output_20_way_07_10_2020.zip?dl=1"
+package_20_way_URL="https://www.dropbox.com/s/kfitwnuor7873zx/pandora1_paper_analysis_output_20_way_27_10_2020.zip?dl=1"
 package_4_way_URL="https://www.dropbox.com/s/1jurbe31tgjv1oh/pandora1_paper_analysis_output_4_way_28_09_2020.zip?dl=1"
 
 if [ ! -d "pandora1_paper_analysis_output_20_way" ]
