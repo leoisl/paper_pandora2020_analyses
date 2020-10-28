@@ -37,8 +37,8 @@ data <- read.csv("roary_output/all_count.txt", sep='\t', header=TRUE)
 
 count_plot <- ggplot(data, aes(x=count, fill=species)) + geom_bar(position="dodge") +
   scale_x_discrete(limits=c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")) + 
-  theme(axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
+  theme(axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
         axis.text.x = element_text(size=12),
         axis.text.y = element_text(size=12)) +
   scale_fill_discrete(
@@ -49,6 +49,8 @@ count_plot <- ggplot(data, aes(x=count, fill=species)) + geom_bar(position="dodg
                expression(italic("S. aureus")),
                expression(italic("S. enterica")),
                expression(italic("S. pneumoniae")))) +
+  ylab("Count of genes") +
+  xlab("Number of genomes") +
   theme(legend.text.align = 0)
 
 
@@ -60,8 +62,8 @@ data <- read.csv("roary_output/gene_props_all.tsv", sep='\t', header=TRUE)
 proportion_plot <- ggplot(data, aes(x=genomes, y=prop, fill=species)) + geom_bar(stat='identity', position="dodge") +
   scale_x_discrete(limits=c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")) +
   scale_y_continuous(breaks = c(0.1, 0.2, 0.3, 0.4, 0.5)) +
-  theme(axis.title.x = element_blank(),
-        axis.title.y = element_blank(),
+  theme(axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12),
         axis.text.x = element_text(size=12),
         axis.text.y = element_text(size=12)) +
   scale_fill_discrete(
@@ -72,6 +74,8 @@ proportion_plot <- ggplot(data, aes(x=genomes, y=prop, fill=species)) + geom_bar
                expression(italic("S. aureus")),
                expression(italic("S. enterica")),
                expression(italic("S. pneumoniae")))) +
+  ylab("Proportion of genes") +
+  xlab("Number of genomes") +
   theme(legend.text.align = 0)
 
 
