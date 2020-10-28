@@ -20,6 +20,10 @@ fi
 
 mkdir -p paper_plots
 
+echo "Generating Figure 1..."
+cd Figure1 && bash produce_figure.sh && cd ..
+cp Figure1/Figure1.png paper_plots/Figure1.png
+
 echo "Generating Figure 5..."
 cd 4wayROC && bash produce_figure.sh && cd ..
 cp 4wayROC/ROC_data_old_and_new_basecall.png paper_plots/Figure5.png
