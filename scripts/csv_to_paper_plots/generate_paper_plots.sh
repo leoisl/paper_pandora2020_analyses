@@ -30,6 +30,9 @@ cp Figure2/Figure2.png paper_plots/Figure2.png
 echo "Generating Figure 3..."
 cp Figure3/Figure3.png paper_plots/Figure3.png
 
+echo "Generating Figure 4..."
+cp Figure4/Figure4.png paper_plots/Figure4.png
+
 echo "Generating Figure 5..."
 cd 4wayROC && bash produce_figure.sh && cd ..
 cp 4wayROC/ROC_data_old_and_new_basecall.png paper_plots/Figure5.png
@@ -48,6 +51,10 @@ cp recall_per_nb_of_samples/leandro/SupplementaryFigureA5.png paper_plots/Supple
 echo "Generating Figure 8..."
 cd Figure8 && bash produce_figure.sh && cd ..
 cp Figure8/Figure8.png paper_plots/Figure8.png
+
+echo "Generating Figure 9..."
+cd two_SNP_heatmap && bash produce_figure.sh && cd ..
+cp two_SNP_heatmap/Figure9.png paper_plots/Figure9.png
 
 echo "Generating Figure 10..."
 cd Figure10 && bash produce_figure.sh && cd ..
