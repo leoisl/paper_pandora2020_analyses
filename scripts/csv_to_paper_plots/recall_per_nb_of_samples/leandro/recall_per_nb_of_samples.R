@@ -243,7 +243,7 @@ supp_fig = grid.arrange(arrangeGrob(illumina_avg_allelic_recall,
 
 
 
-ggsave(supp_fig, file="SupplementaryFigureA4.png", width=15, height=10, dpi=300)
+ggsave(supp_fig, file="SupplementaryFigureA4.png", width=15, height=5, dpi=300)
 
 
 
