@@ -30,3 +30,4 @@ scripts/csv_to_paper_plots/gene_classification/.ipynb_checkpoints/
 scripts/csv_to_paper_plots/recall_per_nb_of_samples/difference_of_panvars_found_in_rare_loci/.ipynb_checkpoints/
 
 **/Rplots.pdf
+**/.DS_Store
