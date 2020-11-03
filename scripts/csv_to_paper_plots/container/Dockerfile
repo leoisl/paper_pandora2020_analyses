@@ -7,7 +7,7 @@ FROM rocker/r-base:4.0.3
 
 # install basic tools
 RUN apt-get update
-RUN apt-get install -y wget python3.8 python3-pip libcurl4-openssl-dev libssl-dev libxml2-dev
+RUN apt-get install -y wget python3.8 python3-pip python3-dev libcurl4-openssl-dev libssl-dev libxml2-dev
 RUN cp /usr/bin/python3.8 /usr/bin/python
 RUN cp /usr/bin/pip3 /usr/bin/pip
 
