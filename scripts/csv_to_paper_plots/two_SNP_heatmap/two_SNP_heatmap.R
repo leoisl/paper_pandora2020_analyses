@@ -6,26 +6,7 @@ library(ggplot2)
 library(pheatmap)
 library(reshape)
 library(RColorBrewer)
-
-
-#============================
-# Pivot wider and col pal
-#============================
-pivot_wider <--function (data, id_cols = NULL, names_from = name, names_prefix = "", 
-                         names_sep = "_", names_repair = "check_unique", values_from = value, 
-                         values_fill = NULL, values_fn = NULL) 
-{
-  names_from <- enquo(names_from)
-  values_from <- enquo(values_from)
-  spec <- build_wider_spec(data, names_from = !!names_from, 
-                           values_from = !!values_from, names_prefix = names_prefix, 
-                           names_sep = names_sep)
-  id_cols <- enquo(id_cols)
-  pivot_wider_spec(data, spec, !!id_cols, names_repair = names_repair, 
-                   values_fill = values_fill, values_fn = values_fn)
-}
-
-pal <- brewer.pal(9, "OrRd")
+library(tidyverse)
 
 
 #=====================
@@ -96,6 +77,7 @@ sample_to_colour_reverse = c(
                              rep("#00ceffff", 5),rep("#FF00FF", 5))
 
 
+pal <- brewer.pal(9, "OrRd")
 
 #=====================
 # heatmap
@@ -104,10 +86,13 @@ heatmap_fig = ggplot(count_melt, aes(FIRST_SAMPLE, SECOND_SAMPLE)) +
   theme_bw() +
   xlab('') +
   ylab('') +
-  geom_tile(aes(fill= log(value+1)), color='gray') 
+  geom_tile(aes(fill= log(value+1)), color='gray') +
   scale_fill_gradientn(colours = pal)  + 
   theme_bw() + 
-  theme(panel.border = element_blank(), panel.grid.major = element_blank(),panel.grid.minor = element_blank(), axis.line = element_line(colour = "grey50")) +
+  theme(panel.border = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(), 
+        axis.line = element_line(colour = "grey50")) +
   theme(axis.text.x = element_text(angle = 45, hjust =1)) + 
   guides(fill=guide_legend(title=custom_label)) +
   theme(legend.title = element_text(size=10)) +
