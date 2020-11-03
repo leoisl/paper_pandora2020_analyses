@@ -52,9 +52,9 @@ echo "Generating Figure 8..."
 cd Figure8 && bash produce_figure.sh && cd ..
 cp Figure8/Figure8.png paper_plots/Figure8.png
 
-#echo "Generating Figure 9..."
-#cd two_SNP_heatmap && bash produce_figure.sh && cd ..
-#cp two_SNP_heatmap/Figure9.png paper_plots/Figure9.png
+echo "Generating Figure 9..."
+cd two_SNP_heatmap && bash produce_figure.sh && cd ..
+cp two_SNP_heatmap/Figure9.png paper_plots/Figure9.png
 
 echo "Generating Figure 10..."
 cd Figure10 && bash produce_figure.sh && cd ..
