@@ -68,48 +68,48 @@ fi
 
 
 
-flag_file="${pipeline_output}/pandora_analysis_pipeline_old_basecall_done"
+flag_file="${pipeline_output}/pandora_workflow_old_basecall_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora_analysis_pipeline old basecall..."
-  cd ${pipeline_output}/pandora_analysis_pipeline
+  echo "Running pandora_workflow old basecall..."
+  cd ${pipeline_output}/pandora_workflow
   source venv/bin/activate
   bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.4_way_old_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    || { echo 'FATAL ERROR: pandora_analysis_pipeline old basecall failed;' ; exit 1; }
+    || { echo 'FATAL ERROR: pandora_workflow old basecall failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora_analysis_pipeline old basecall"
+  echo "Skipping pandora_workflow old basecall"
 fi
 
 
-flag_file="${pipeline_output}/pandora_analysis_pipeline_new_basecall_done"
+flag_file="${pipeline_output}/pandora_workflow_new_basecall_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora_analysis_pipeline new basecall..."
-  cd ${pipeline_output}/pandora_analysis_pipeline
+  echo "Running pandora_workflow new basecall..."
+  cd ${pipeline_output}/pandora_workflow
   source venv/bin/activate
   bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    || { echo 'FATAL ERROR: pandora_analysis_pipeline new basecall failed;' ; exit 1; }
+    || { echo 'FATAL ERROR: pandora_workflow new basecall failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora_analysis_pipeline new basecall"
+  echo "Skipping pandora_workflow new basecall"
 fi
 
 
-flag_file="${pipeline_output}/pandora_analysis_pipeline_illumina_done"
+flag_file="${pipeline_output}/pandora_workflow_illumina_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora_analysis_pipeline illumina..."
-  cd ${pipeline_output}/pandora_analysis_pipeline
+  echo "Running pandora_workflow illumina..."
+  cd ${pipeline_output}/pandora_workflow
   source venv/bin/activate
   bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.4_way_illumina.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-    || { echo 'FATAL ERROR: pandora_analysis_pipeline illumina failed;' ; exit 1; }
+    || { echo 'FATAL ERROR: pandora_workflow illumina failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora_analysis_pipeline illumina"
+  echo "Skipping pandora_workflow illumina"
 fi
 
 

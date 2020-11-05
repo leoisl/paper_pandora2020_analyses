@@ -7,7 +7,7 @@ rule all:
         output_dir / "data",
         output_dir / "pangenome_variations",
         output_dir / "subsampler",
-        output_dir / "pandora_analysis_pipeline",
+        output_dir / "pandora_workflow",
         output_dir / "variant_callers_pipeline",
         output_dir / "pandora1_paper"
 
@@ -57,17 +57,17 @@ rule install_subsampler:
         """
 
 
-rule install_pandora_analysis_pipeline:
+rule install_pandora_workflow:
     output:
-          directory(output_dir / "pandora_analysis_pipeline")
+          directory(output_dir / "pandora_workflow")
     threads: 1
     resources:
         mem_mb=16000
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/pandora_analysis_pipeline.git && \
-        cd pandora_analysis_pipeline && \
+        git clone --recursive git@github.com:leoisl/pandora_workflow.git && \
+        cd pandora_workflow && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
         """
