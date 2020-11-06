@@ -117,6 +117,21 @@ Other fields:
 * `coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: details about the run;
 
 
+## FP_genes
+
+Provides data about the amount of FP, TP, FN, and TN loci found by pandora.
+
+Main files:
+
+* `gene_classification.csv`: contains the counts of FP, TP, FN, and TN loci (columns) for pandora in all samples;
+* `gene_classification_by_sample.csv`: contains the counts of FP, TP, FN, and TN loci (columns) for pandora in each sample (rows);
+* `gene_classification_by_gene_length.csv`: contains the counts of FP, TP, FN, and TN loci (1st column) split by
+locus length (remaining columns), from locus up to 100, 200, 300, ... 4100+ bps. The header is composed of the 3 first lines 
+(a pandas multirow header);
+* `gene_classification_by_gene_length_normalised.csv`: the same as `gene_classification_by_gene_length.csv`, but with
+proportion instead of counts;
+
+
 ## precision_per_ref_per_clade
 
 Shows a breakdown of the precision of each tool (snippy, samtools, medaka, etc) against pandora.
