@@ -76,6 +76,9 @@ cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_nb_of_samples_per_c
 echo "Generating Supplementary Figure A.11"
 cp pangenome_variants/pangenome_variants.png paper_plots/SupplementaryFigureA11.png
 
+echo "Generating Supplementary Animation 1"
+cp supplementary_animation_1/SupplementaryAnimation1.mov paper_plots/SupplementaryAnimation1.mov
+
 echo "Generating Supplementary Animation 2"
 cd supplementary_animation_2 && bash produce_figure.sh && cd ..
 cp supplementary_animation_2/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.gif paper_plots/SupplementaryAnimation2.gif
