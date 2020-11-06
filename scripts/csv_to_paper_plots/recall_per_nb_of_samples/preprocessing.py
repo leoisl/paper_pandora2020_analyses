@@ -10,10 +10,10 @@ import pandas as pd
 # In[2]:
 
 
-df_pvr_illumina = pd.read_csv("../../pandora1_paper_analysis_output_20_way/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.plot_data.csv")
-df_pvr_nanopore = pd.read_csv("../../pandora1_paper_analysis_output_20_way/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.plot_data.csv")
-df_avgar_illumina = pd.read_csv("../../pandora1_paper_analysis_output_20_way/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.plot_data.csv")
-df_avgar_nanopore = pd.read_csv("../../pandora1_paper_analysis_output_20_way/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.plot_data.csv")
+df_pvr_illumina = pd.read_csv("../pandora1_paper_analysis_output_20_way/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.plot_data.csv")
+df_pvr_nanopore = pd.read_csv("../pandora1_paper_analysis_output_20_way/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.plot_data.csv")
+df_avgar_illumina = pd.read_csv("../pandora1_paper_analysis_output_20_way/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.plot_data.csv")
+df_avgar_nanopore = pd.read_csv("../pandora1_paper_analysis_output_20_way/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.plot_data.csv")
 
 
 # In[3]:

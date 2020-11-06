@@ -45,8 +45,8 @@ cp Figure6/ROC_with_PVR_Supplementary.png paper_pandora2020_plots/SupplementaryF
 
 echo "Generating Figure 7..."
 cd recall_per_nb_of_samples && bash produce_figure.sh && cd ..
-cp recall_per_nb_of_samples/leandro/Figure7.png paper_pandora2020_plots/Figure7.png
-cp recall_per_nb_of_samples/leandro/SupplementaryFigureA4.png paper_pandora2020_plots/SupplementaryFigureA4.png
+cp recall_per_nb_of_samples/Figure7.png paper_pandora2020_plots/Figure7.png
+cp recall_per_nb_of_samples/SupplementaryFigureA4.png paper_pandora2020_plots/SupplementaryFigureA4.png
 
 echo "Generating Figure 8..."
 cd Figure8 && bash produce_figure.sh && cd ..
