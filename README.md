@@ -72,7 +72,7 @@ variants contribute to a lot more alleles, and thus weight, in the recall calcul
 if we are in a panel with 20 genomes, one core variant can have the same weight as 10 rare variants. This means that our
 recall measurement is biased towards tools that recover core variants well. For this reason, this measure is generally
 not considered in the paper, except when it is needed to compute recall restricted to single samples (which is the only
-measure defined in these cases). To deal with this core variant bias, we have two other measures.
+measure defined in this case). To deal with this core variant bias, we have two other measures.
 
 * Pan-Variant Recall (`PVR`, referenced as `recall_wrt_variants_where_all_allele_seqs_were_found` in the files) would be:
 `(1 + 1 + 0) / 3 = 0.66` - i.e. score a `1` if both alleles are found, irrespective of how often, and `0` otherwise. 
@@ -184,7 +184,7 @@ Fields explanation:
 ## recall_per_ref_per_clade
 
 Same as [precision_per_ref_per_clade](#precision_per_ref_per_clade), but for recall instead of precision.
-The recall considered here is the recall WRT truth probes (as it is the only defined for a single sample).
+The recall considered here is the Total Allelic Recall (`recall_wrt_truth_probes`), as it is the only defined for a single sample.
 
 Main files: `recall_per_ref_per_clade_{tool}_pandora.csv` , tool == `snippy` or `samtools` or `medaka` or `nanopolish`
 
