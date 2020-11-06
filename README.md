@@ -299,7 +299,7 @@ Other fields:
 These folders/files refer to sequencing-technology-independent analyses, present in the folder `technology_independent_analysis`.
 
 
-## plot_pangenome_variants_vs_samples
+## pangenome_variants_vs_samples
 
 Provides data to check how many pangenome variants are in 2, 3, 4, ... samples.
 
@@ -316,5 +316,6 @@ PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
 
 Fields explanation:
 
-* `PANGENOME_VARIATION_ID`: ignore, it is the identifier of the pangenome variation;
+* `PANGENOME_VARIATION_ID`: the identifier of the pangenome variation;
 * `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
+
