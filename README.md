@@ -68,10 +68,10 @@ For the third gene's SNP, it detected all the 5 `T`s, but no `A`. Here, the:
 
 * Truth Probe Recall (`TPR`, referenced as `recall_wrt_truth_probes` in the files) would be 
 `number of alleles found / number of total alleles = (2+2+5)/(2+10+20) = 0.28`. The main issue with `TPR` is that core
-variants contribute to a lot more alleles, and thus weight, in the recall calculation than rare variants, for example,
+variants contribute to a lot more alleles, and thus weight, in the recall calculation than rare variants. For example,
 if we are in a panel with 20 genomes, one core variant can have the same weight as 10 rare variants. This means that our
-recall measurement is biased towards tools that recover core variants well. To deal with this bias, we have two other
-measures
+recall measurement is biased towards tools that recover core variants well. For this reason, this measurement is not
+considered in the paper. To deal with this bias, we have two other measures.
 
 * Pan-Variant Recall (`PVR`, referenced as `recall_wrt_variants_where_all_allele_seqs_were_found` in the files) would be:
 `(1 + 1 + 0) / 3 = 0.66` - i.e. score a `1` if both allele are found, irrespective of how often, and `0` otherwise.
