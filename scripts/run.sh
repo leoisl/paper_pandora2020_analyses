@@ -96,36 +96,36 @@ fi
 
 
 
-flag_file="${pipeline_output}/pandora1_paper_pipeline_done"
+flag_file="${pipeline_output}/pandora_paper_roc_pipeline_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora1_paper pipeline..."
-  cd ${pipeline_output}/pandora1_paper
+  echo "Running pandora_paper_roc pipeline..."
+  cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
             --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
+  || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora1_paper pipeline"
+  echo "Skipping pandora_paper_roc pipeline"
 fi
 
 
 
-flag_file="${pipeline_output}/pandora1_paper_pipeline_filters_done"
+flag_file="${pipeline_output}/pandora_paper_roc_pipeline_filters_done"
 if ! test -f "${flag_file}"; then
-  echo "Running pandora1_paper pipeline with filters..."
-  cd ${pipeline_output}/pandora1_paper
+  echo "Running pandora_paper_roc pipeline with filters..."
+  cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
             --configfile config.pandora_filters.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
-  || { echo 'FATAL ERROR: pandora1_paper pipeline failed;' ; exit 1; }
+  || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
 else
-  echo "Skipping pandora1_paper pipeline with filters"
+  echo "Skipping pandora_paper_roc pipeline with filters"
 fi
 
 

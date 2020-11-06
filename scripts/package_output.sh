@@ -26,15 +26,15 @@ for technology in "${technologies[@]}"; do
   for filter in "${filters[@]}"; do
     mkdir -p "${output_dir}/${technology}_analysis${filter}"
 
-    # pandora 1 paper
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/enrichment_of_FPs"                          "${output_dir}/${technology}_analysis${filter}/enrichment_of_FPs"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/precision_per_ref_per_clade"                "${output_dir}/${technology}_analysis${filter}/precision_per_ref_per_clade"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/precision_per_sample"                       "${output_dir}/${technology}_analysis${filter}/precision_per_sample"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_nb_of_samples"                   "${output_dir}/${technology}_analysis${filter}/recall_per_nb_of_samples"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_ref_per_clade"                   "${output_dir}/${technology}_analysis${filter}/recall_per_ref_per_clade"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_ref_per_nb_of_samples_per_clade" "${output_dir}/${technology}_analysis${filter}/recall_per_ref_per_nb_of_samples_per_clade"
-    cp -vr "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_sample"                          "${output_dir}/${technology}_analysis${filter}/recall_per_sample"
-    cp -v "${pipeline_output}/pandora1_paper/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/ROC_data.tsv"                               "${output_dir}/${technology}_analysis${filter}/ROC_data.tsv"
+    # pandora paper roc
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/enrichment_of_FPs"                          "${output_dir}/${technology}_analysis${filter}/enrichment_of_FPs"
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/precision_per_ref_per_clade"                "${output_dir}/${technology}_analysis${filter}/precision_per_ref_per_clade"
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/precision_per_sample"                       "${output_dir}/${technology}_analysis${filter}/precision_per_sample"
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_nb_of_samples"                   "${output_dir}/${technology}_analysis${filter}/recall_per_nb_of_samples"
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_ref_per_clade"                   "${output_dir}/${technology}_analysis${filter}/recall_per_ref_per_clade"
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_ref_per_nb_of_samples_per_clade" "${output_dir}/${technology}_analysis${filter}/recall_per_ref_per_nb_of_samples_per_clade"
+    cp -vr "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/recall_per_sample"                          "${output_dir}/${technology}_analysis${filter}/recall_per_sample"
+    cp -v "${pipeline_output}/pandora_paper_roc/analysis_output_${technology}_pandora_paper_tag1${filter}/plot_data/ROC_data.tsv"                               "${output_dir}/${technology}_analysis${filter}/ROC_data.tsv"
 
     # pandora_gene_distance
     if [ "$filter" = "" ]
