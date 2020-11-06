@@ -131,6 +131,31 @@ locus length (remaining columns), from locus up to 100, 200, 300, ... 4100+ bps.
 * `gene_classification_by_gene_length_normalised.csv`: the same as `gene_classification_by_gene_length.csv`, but with
 proportions instead of counts;
 
+## gene_distance_plots
+
+Provides data about the edit distance between locus sequences in the references (pandora inferred VCF-reference + the other 24 references)
+and in the 20 samples.
+
+Main file:
+
+* `gene_sample_ref_ED_nbsamples_zam.csv`
+
+Preview:
+
+```
+gene_name,sample,ref,edit_distance,edit_distance_labels,nb_of_samples
+GC00003501,063_STEC,NC_011993.1,0.010101010101010102,0.02,20
+GC00003501,CFT073,NC_011993.1,0.0,0.01,20
+GC00003501,Escherichia_coli_MINF_1A,NC_011993.1,0.060606060606060615,0.07,20
+GC00003501,Escherichia_coli_MINF_1D,NC_011993.1,0.0505050505050505,0.060000000000000005,20
+```
+
+Fields explanation:
+
+* `gene_name`, `sample`, `ref`, `edit_distance`: self explanatory;
+* `nb_of_samples`: the number of samples the given gene was identified in;
+* `edit_distance_labels`: ignore;
+
 
 ## precision_per_ref_per_clade
 
