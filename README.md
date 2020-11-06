@@ -5,6 +5,11 @@ plots in the paper.
 
 The version used in the pandora paper has tag `pandora_paper_tag1`.
 
+# Paper plots
+
+If you are interested only on the paper plots package, it can be [viewed here](scripts/csv_to_paper_plots/paper_pandora2020_plots)
+or [downloaded here](https://github.com/leoisl/pandora1_paper_full_pipeline/raw/master/scripts/csv_to_paper_plots/paper_pandora2020_plots.zip).
+
 # Running
 
 ## Requirements
