@@ -58,7 +58,8 @@ cp two_SNP_heatmap/Figure9.png paper_plots/Figure9.png
 
 echo "Generating Figure 10..."
 cd Figure10 && bash produce_figure.sh && cd ..
-cp Figure10/Figure10.sample_gene_pairs_within_1perc_distance_gene_count_up_to_20.nanopore.png paper_plots/Figure10.png
+cp Figure10/loci_ref_sample_approximation_ed_1.png paper_plots/Figure10.png
+cp Figure10/loci_ref_sample_approximation_ed_0.png paper_plots/SupplementaryFigureA10.png
 
 echo "Generating Supplementary Figure A.3"
 cd gene_classification && bash produce_figure.sh && cd ..
@@ -72,8 +73,8 @@ cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_medaka_pandor
 cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_nanopolish_pandora.png paper_plots/SupplementaryFigureA8.png
 cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.png paper_plots/SupplementaryFigureA9.png
 
-echo "Generating Supplementary Figure A.10"
-cp pangenome_variants/pangenome_variants.png paper_plots/SupplementaryFigureA10.png
+echo "Generating Supplementary Figure A.11"
+cp pangenome_variants/pangenome_variants.png paper_plots/SupplementaryFigureA11.png
 
 echo "Generating Supplementary Animation 2"
 cd supplementary_animation_2 && bash produce_figure.sh && cd ..
