@@ -88,7 +88,7 @@ For more details, please see the paper manuscript.
 
 These folders/files refer to sequencing-technology-dependent analyses, present in the folders
 `illumina_analysis`, `illumina_analysis_with_filters`, `nanopore_analysis`, and `nanopore_analysis_with_filters`.
-For details about the filters applied in these results, see Methods section in the paper manuscript.
+For details about the filters applied in these results, see the Methods section in the paper manuscript.
 
 ## enrichment_of_FPs
 
@@ -115,26 +115,6 @@ Other fields:
 * `GT` and `step_GT`: ignore, not relevant here;
 * `nb_of_correct_calls` and `nb_of_total_calls`: raw values used to compute `precision` and `error_rate`;
 * `coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: details about the run;
-
-## plot_pangenome_variants_vs_samples
-
-Provides data to check how many pangenome variants are in 2, 3, 4, ... samples.
-
-Main file: `pangenome_variations_per_nb_of_samples.csv` 
-
-Preview:
-```
-PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
-0,2
-1,4
-2,2
-3,20
-```
-
-Fields explanation:
-
-* `PANGENOME_VARIATION_ID`: ignore, it is the identifier of the pangenome variation;
-* `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
 
 
 ## precision_per_ref_per_clade
@@ -271,3 +251,29 @@ Important fields:
 Other fields:
 * `step_GT`: the genotype filtering step used. The lower (higher) the value, the more lenient (strict) the GT filtering was. 0 is unfiltered, and the max value is the max filtering we set for the pipeline;
 * `nb_of_correct_calls,nb_of_total_calls,nbs_of_truth_probes_found,nbs_of_truth_probes_in_total,nbs_variants_where_all_allele_seqs_were_found,nbs_variants_found_wrt_alleles,nbs_variants_total`: fields used to compute the error rate and the recalls;
+
+
+## Sequencing-technology-independent analyses
+
+These folders/files refer to sequencing-technology-independent analyses, present in the folder `technology_independent_analysis`.
+
+
+## plot_pangenome_variants_vs_samples
+
+Provides data to check how many pangenome variants are in 2, 3, 4, ... samples.
+
+Main file: `pangenome_variations_per_nb_of_samples.csv` 
+
+Preview:
+```
+PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
+0,2
+1,4
+2,2
+3,20
+```
+
+Fields explanation:
+
+* `PANGENOME_VARIATION_ID`: ignore, it is the identifier of the pangenome variation;
+* `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
