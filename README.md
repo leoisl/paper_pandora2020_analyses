@@ -190,10 +190,10 @@ Main files: `recall_per_ref_per_clade_{tool}_pandora.csv` , tool == `snippy` or 
 
 ## recall_per_ref_per_nb_of_samples_per_clade
 
-Similar to [recall_per_ref_per_clade](#recall_per_ref_per_clade), but we have data split by frequency (nb of samples) the
-pangenome variant is in. The field `nb_of_samples` represent this.
+Similar to [recall_per_ref_per_clade](#recall_per_ref_per_clade), but we have data split by frequency (or number of samples) the
+allele of the pangenome variant is in. The field `nb_of_samples` represent this.
 
-Main files: `recall_per_ref_per_nb_of_samples_per_clade.{tool}_pandora.nb_of_samples_{nb}.csv` , tool == `snippy` or `samtools` or `medaka` or `nanopolish` , nb ranges from 2 to 20;
+Main files: `recall_per_ref_per_nb_of_samples_per_clade.{tool}_pandora.nb_of_samples_{nb}.csv` , tool == `snippy` or `samtools` or `medaka` or `nanopolish` , `nb` ranges from 2 to 20;
 
 ## precision_per_sample
 
