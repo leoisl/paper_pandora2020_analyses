@@ -233,17 +233,20 @@ Other fields:
 ## recall_per_nb_of_samples
 
 Data about the recall of each tool split by the pangenome variants frequency (nb of samples a pangenome variant is in).
-The recall considered here is the recall WRT pangenome variants sequences.
+The recalls considered here are: i) Pan-Variant Recall (`PVR`, `recall_wrt_variants_where_all_allele_seqs_were_found`);
+ii) Average Allelic Recall (`AvgAR`, `recall_wrt_variants_found_wrt_alleles`).
 
-Main file: `recall_per_nb_of_samples.plot_data.csv` (use this, don't use the unprocessed `recall_per_nb_of_samples.tsv`)
+Main files:
+* `recall_per_nb_of_samples_pvr.plot_data.csv` (for `PVR`);
+* `recall_per_nb_of_samples_avgar.plot_data.csv` (for `AvgAR`);
 
-Preview:
+Preview (for `PVR`, `AvgAR` is similar):
 
 ```
-coverage,tool,coverage_threshold,strand_bias_threshold,gaps_threshold,NB_OF_SAMPLES,recall,NUMBER_OF_SAMPLES,total_nb_of_PanVar,nb_of_found_PanVar,cumulative_nb_of_found_PanVar,colour
-100x,pandora_illumina_nodenovo_global_genotyping,0,0.0,1.0,2,0.4584300168900254,2,63351,29041.999999999996,29041.999999999996,orange
-100x,pandora_illumina_withdenovo_global_genotyping,0,0.0,1.0,2,0.4929203958895677,2,63351,31227.000000000004,31227.000000000004,blue
-100x,pandora_nanopore_nodenovo_global_genotyping,0,0.0,1.0,2,0.456362172657101,2,63351,28911.000000000004,28911.000000000004,orange
+coverage,tool,coverage_threshold,strand_bias_threshold,gaps_threshold,NB_OF_SAMPLES,recall,recall_PVR,NUMBER_OF_SAMPLES,total_nb_of_PanVar,nb_of_found_PanVar,cumulative_nb_of_found_PanVar,colour
+100x,pandora_illumina_nodenovo_global_genotyping,0,0.0,1.0,2,,0.4584300168900254,2,63351,29041.999999999996,29041.999999999996,orange
+100x,pandora_illumina_withdenovo_global_genotyping,0,0.0,1.0,2,,0.4929203958895677,2,63351,31227.000000000004,31227.000000000004,blue
+100x,snippy_NC_011993.1,0,Not_App,Not_App,2,,0.30694069549020536,2,63351,19445.0,19445.0,"rgba(255,0,0,0.3)"
 ```
 
 Fields explanation:
@@ -251,18 +254,20 @@ Fields explanation:
 Important fields:
 
 * `tool`: the considered tool;
-* `recall`: the recall WRT pangenome variants sequences;
-* `NB_OF_SAMPLES` or `NUMBER_OF_SAMPLES`: these are the same, represent the recall if we look at the pangenome variants with this given frequency (nb of samples).
-I forgot to remove one of them when merging dataframes;
+* `recall_PVR`: the `PVR`;
+* `NB_OF_SAMPLES` or `NUMBER_OF_SAMPLES`: represent the recall at the given frequency. Duplicated fields;
 * `nb_of_found_PanVar`: the number of pangenomes variations found. Can be used to do the plot with absolute counts;
 * `cumulative_nb_of_found_PanVar`: the number of pangenomes variations found cumulatively (i.e. with `NB_OF_SAMPLES` less than the number of samples of this record).
 Can be used to do the plot with cumulative absolute counts;
-* `colour`: the proposed colour for the tool when plotting;
 
 Other fields:
 
 * `total_nb_of_PanVar`: total number of pangenome variations at that frequency;
 * `coverage,coverage_threshold,strand_bias_threshold,gaps_threshold`: filtering options;
+* `colour`: ignore;
+* `recall`: empty field, to be removed;
+
+For `AvgAR`, we have `recall_AvgAR` instead of `recall_PVR`.
 
 ## recall_per_sample_per_number_of_samples
 
