@@ -46,7 +46,7 @@ to create the plots in the paper, please do:
 
 # Package files description
 
-The `pandora1_paper_analysis_output_20_way.zip` and `pandora1_paper_analysis_output_4_way.zip` packages contain data that 
+The `pandora1_paper_analysis_output_20_way.zip` package contains data that 
 can be reprocessed and replotted. Besides the data, some plots are also included to give a general sense/idea of the data,
 and how the plots could look like, but it is by no means the best visualisation of the data. 
 In what follows is a short description of each file and its fields, to help on the understanding of the files in these 
@@ -83,6 +83,12 @@ This is a balance between the two previous measures. It does not overweight core
 recall value in `[0, 1]`), and it rewards tools finding more alleles of a variant.
 
 For more details, please see the paper manuscript.
+
+## Sequencing-technology-dependent analyses
+
+These folders/files refer to sequencing-technology-dependent analyses, present in the folders
+`illumina_analysis`, `illumina_analysis_with_filters`, `nanopore_analysis`, and `nanopore_analysis_with_filters`.
+For details about the filters applied in these results, see Methods section in the paper manuscript.
 
 ## enrichment_of_FPs
 
