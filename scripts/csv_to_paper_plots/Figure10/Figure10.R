@@ -28,6 +28,7 @@ y_axis_labs = c(expression(paste("10"^"1")),
                 
 pandora_lab = expression(paste(italic("pandora")))
 
+ggthemr('fresh')
 #############################
 # Plot 1% data
 #############################
