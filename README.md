@@ -81,6 +81,8 @@ measures
 This is a balance between the two previous measures. It does not overweight core variants (all variants have a
 recall value in `[0, 1]`), and it rewards tools finding more alleles of a variant.
 
+For more details, please see the paper manuscript.
+
 ## enrichment_of_FPs
 
 Provides for each tool and sample, the error rate the pipeline computed for that tool on that sample. Can be mainly used
