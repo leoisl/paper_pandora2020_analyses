@@ -319,3 +319,23 @@ Fields explanation:
 * `PANGENOME_VARIATION_ID`: the identifier of the pangenome variation;
 * `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
 
+
+## two_SNP_heatmap
+
+Provides data to build the 2-SNP heatmap (sharing of variants present in precisely 2 genomes).
+
+Main file: `two_SNP_heatmap_count_df.csv` 
+
+Preview:
+```
+FIRST_SAMPLE,SECOND_SAMPLE,count
+063_STEC,063_STEC,0
+063_STEC,CFT073,4138
+063_STEC,H131800734,67
+063_STEC,MINF_1A,1964
+```
+
+Fields explanation:
+
+`count` is the number of pangenome variants with frequency 2 found between the `FIRST_SAMPLE` and `SECOND_SAMPLE`.
+
