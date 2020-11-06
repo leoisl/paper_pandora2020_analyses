@@ -74,7 +74,7 @@ recall measurement is biased towards tools that recover core variants well. For 
 considered in the paper. To deal with this bias, we have two other measures.
 
 * Pan-Variant Recall (`PVR`, referenced as `recall_wrt_variants_where_all_allele_seqs_were_found` in the files) would be:
-`(1 + 1 + 0) / 3 = 0.66` - i.e. score a `1` if both allele are found, irrespective of how often, and `0` otherwise.
+`(1 + 1 + 0) / 3 = 0.66` - i.e. score a `1` if both alleles are found, irrespective of how often, and `0` otherwise.
 
 * Average Allelic Recall (`AvgAR`, referenced as `recall_wrt_variants_found_wrt_alleles`) would be:
 `(2/2 + 2/10 + 5/20) / 3 = 0.48` - i.e. for each variant, the `number of alleles found / total number of alleles`. 
