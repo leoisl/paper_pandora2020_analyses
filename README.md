@@ -269,11 +269,6 @@ Other fields:
 
 For `AvgAR`, we have `recall_AvgAR` instead of `recall_PVR`.
 
-## recall_per_sample_per_number_of_samples
-
-The same plot as [recall_per_nb_of_samples](#recall_per_nb_of_samples), but further split by samples. Not sure if interesting,
-we are not producing a plot related to this data yet.
-
 ## ROC_data_all_tools.tsv
 
 The ROC data for all tools, with no filtering.
