@@ -129,7 +129,7 @@ Main files:
 locus length (remaining columns), from locus up to 100, 200, 300, ... 4100+ bps. The header is composed of the 3 first lines 
 (a pandas multirow header);
 * `gene_classification_by_gene_length_normalised.csv`: the same as `gene_classification_by_gene_length.csv`, but with
-proportion instead of counts;
+proportions instead of counts;
 
 
 ## precision_per_ref_per_clade
