@@ -9,7 +9,8 @@ rule all:
         output_dir / "subsampler",
         output_dir / "pandora_workflow",
         output_dir / "variant_callers_pipeline",
-        output_dir / "pandora1_paper"
+        output_dir / "pandora_paper_roc",
+        output_dir / "pandora_gene_distance",
 
 
 rule link_input_data:
@@ -34,7 +35,7 @@ rule install_pangenome_variations:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/pangenome_variations.git && \
+        git clone --recursive https://github.com/iqbal-lab-org/pangenome_variations && \
         cd pangenome_variations && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
@@ -50,7 +51,7 @@ rule install_subsampler:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/subsampler.git && \
+        git clone --recursive https://github.com/iqbal-lab-org/subsampler && \
         cd subsampler && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
@@ -66,7 +67,7 @@ rule install_pandora_workflow:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/pandora_workflow.git && \
+        git clone --recursive https://github.com/iqbal-lab-org/pandora_workflow && \
         cd pandora_workflow && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
@@ -82,24 +83,24 @@ rule install_variant_callers_pipeline:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/variant_callers_pipeline.git && \
+        git clone --recursive https://github.com/iqbal-lab-org/variant_callers_pipeline && \
         cd variant_callers_pipeline && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
         """
 
 
-rule install_pandora1_paper:
+rule install_pandora_paper_roc:
     output:
-          directory(output_dir / "pandora1_paper")
+          directory(output_dir / "pandora_paper_roc")
     threads: 1
     resources:
         mem_mb=16000
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/pandora1_paper.git && \
-        cd pandora1_paper && \
+        git clone --recursive https://github.com/iqbal-lab-org/pandora_paper_roc && \
+        cd pandora_paper_roc && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
         """
@@ -115,7 +116,7 @@ rule install_pandora_gene_distance:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive git@github.com:leoisl/pandora_gene_distance.git && \
+        git clone --recursive https://github.com/iqbal-lab-org/pandora_gene_distance && \
         cd pandora_gene_distance && \
         git checkout pandora_paper_tag1 && \
         ./setup.sh
