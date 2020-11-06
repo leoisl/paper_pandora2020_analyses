@@ -1,7 +1,3 @@
-- upload H131 to ENA
-	- talk to Martin/Leah
-	https://github.com/iqbal-lab/pandora1_paper/issues/222
-
 - I think the main issue in the denovo pipeline now is not actually waiting for it to finish (this is arguable,
 really depends on the cluster you have, but it is not for us), but to set it up to be run. For pandora no denovo,
 you just run two command lines (pandora index, pandora compare). For the denovo pipeline, you need to configure
@@ -9,48 +5,12 @@ the input data exactly as the snakemake pipeline wants, do some configuration, h
 jobs, etc... this is a lot harder than running just 2 command lines, and I think this is really worth mentioning...
 Should we do it?
 	- i think that belongs on the github front page
-
-
-- add snippy animation to supplementary
-	- remove title
-	- increase y label font
-	- remove the things in brackets
-
+	- explain denovo and non-denovo pipeline in README
 
 - dedicated FTP site for the paper
 	https://github.com/iqbal-lab/pandora1_paper/issues/223
 
+- Describe the new data in README;
+	- Update the truth probes description in the README
 
-
-- Methods:
-	- explain what varifier does
-	- explain how we compare two genomes
-	 -once we have pairwise variations, how do we define panvars;
-	 - description of deduplication algorithm
-	- make table of repos and what they do
-	- explain ROC pipeline
-	- explain recall measure
-	- note that precision is continuous
-
-
-- explain denovo and non-denovo pipeline in README
-
-
-
-
-Priority:
-    - Ensure pipelines and backups are running fine;
-        - back up to yoda
-    - Go through pandora1_paper issues
-
-
-
-TODO next week:
-    - Describe the new data in README;
-        - Update the truth probes description in the README
-
-    - Recheck pangenome vars and other stuff again
-    - Add R scripts
-    - Make repos public and fork to iqbal-lab-org
-        - where to put the dockerhub repos?
-    - Recheck the 4way/20way run scripts
+- Recheck the 4way/20way run scripts
