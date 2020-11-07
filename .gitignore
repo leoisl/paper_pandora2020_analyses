@@ -34,3 +34,9 @@ scripts/csv_to_paper_plots/recall_per_nb_of_samples/difference_of_panvars_found_
 **/*.simg
 
 scripts/pull_containers/paper_pandora2020_containers.zip
+/scripts/pull_containers/paper_pandora2020_containers_part_1.zip
+/scripts/pull_containers/paper_pandora2020_containers_part_2.zip
+
+scripts/create_package_of_repos/paper_pandora2020_code/
+
+scripts/create_package_of_repos/paper_pandora2020_code.zip
