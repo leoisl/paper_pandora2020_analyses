@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
 # pipeline configuration is done by input
-if [ $# -ne 2 ]
+if [ $# -ne 5 ]
   then
-    echo "Usage: $0 <input_data_folder> <pipeline_output>"
+    echo "Usage: $0 <singularity_prefix> <local_cores> <profile> <input_data_folder> <pipeline_output>"
     exit 1
 fi
 
-input_data_folder=$1
-pipeline_output=$2
-profile="lsf"
-LOCAL_CORES=20
+singularity_prefix=$1
+LOCAL_CORES=$2
+profile=$3
+input_data_folder=$4
+pipeline_output=$5
 
 # setup
 mkdir -p "$pipeline_output"
@@ -37,7 +38,7 @@ if ! test -f "${flag_file}"; then
   echo "Running pangenome_variations pipeline..."
   cd ${pipeline_output}/pangenome_variations
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
     || { echo 'FATAL ERROR: pangenome_variations pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -53,7 +54,7 @@ if ! test -f "${flag_file}"; then
   echo "Running subsampler pipeline..."
   cd ${pipeline_output}/subsampler
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
     || { echo 'FATAL ERROR: subsampler pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -69,7 +70,7 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_workflow..."
   cd ${pipeline_output}/pandora_workflow
   source venv/bin/activate
-  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  bash scripts/run_pipeline_lsf.sh --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
     || { echo 'FATAL ERROR: pandora_workflow failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -85,7 +86,7 @@ if ! test -f "${flag_file}"; then
   echo "Running variant_callers_pipeline..."
   cd ${pipeline_output}/variant_callers_pipeline
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
     --keep-going --stats variant_callers_pipeline_runtime_stats || { echo 'FATAL ERROR: variant_callers_pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -102,7 +103,7 @@ if ! test -f "${flag_file}"; then
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+            --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
   || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -119,7 +120,7 @@ if ! test -f "${flag_file}"; then
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
   snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_filters.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+            --configfile config.pandora_filters.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
   || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -135,7 +136,7 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_gene_distance pipeline..."
   cd ${pipeline_output}/pandora_gene_distance
   source venv/bin/activate
-  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix /hps/nobackup2/singularity/leandro/ \
+  snakemake --profile "$profile" --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
   || { echo 'FATAL ERROR: pandora_gene_distance pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
