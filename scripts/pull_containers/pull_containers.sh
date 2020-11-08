@@ -22,7 +22,3 @@ mv pandora_analysis_pipeline-pandora_paper_tag1.simg pandora_workflow-pandora_pa
 mv pandora1_paper_basic_tools-pandora_paper_tag1.simg pandora_roc_basic_tools-pandora_paper_tag1.simg
 mv pandora1_paper_r-pandora_paper_tag1.simg pandora_roc_r-pandora_paper_tag1.simg
 mv pandora1_paper_full_pipeline_r_container-pandora_paper_tag1.simg paper_pandora2020_analyses_r_container-pandora_paper_tag1.simg
-
-# creating package
-cd ..
-zip -r paper_pandora2020_containers.zip paper_pandora2020_containers
