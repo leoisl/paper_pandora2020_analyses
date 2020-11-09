@@ -3,6 +3,12 @@ import gzip
 from Bio import SeqIO
 from pathlib import Path
 import argparse
+import logging
+logging.basicConfig(
+    format='%(asctime)s %(levelname)-8s %(message)s',
+    level=logging.INFO,
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 #############################################################################
 #  helper functions
@@ -22,6 +28,9 @@ def get_number_of_bases(handle, filetype):
 
 
 def get_coverage(reads, reference):
+    logging.info(f"Getting coverage:")
+    logging.info(f"Reads: {reads}")
+    logging.info(f"Reference: {reference}")
     number_of_bases_in_reads = []
     for read_file in reads:
         with gzip.open(read_file, "rt") as handle:
