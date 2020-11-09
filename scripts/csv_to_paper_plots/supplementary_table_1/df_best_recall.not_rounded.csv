@@ -1,0 +1,17 @@
+tool_category,coverage_threshold,strand_bias_threshold,gaps_threshold,error_rate,recalls_wrt_variants_found_wrt_alleles,tool
+medaka,10,Not_App,Not_App,19.53935673180487,84.39172285662518,medaka_NZ_CP009859.1
+medaka,0,Not_App,Not_App,19.53935673180487,84.39172285662518,medaka_NZ_CP009859.1
+nanopolish,0,Not_App,Not_App,3.273260117755772,81.83358003329414,nanopolish_NZ_CP009859.1
+nanopolish,10,Not_App,Not_App,3.0909153939841283,81.81793972224717,nanopolish_NZ_CP009859.1
+pandora_illumina_nodenovo,0,0.0,1.0,0.59087704272498,84.97949421959974,pandora_illumina_nodenovo_global_genotyping
+pandora_illumina_nodenovo,5,0.05,0.8,0.5556182826893297,84.80590785216869,pandora_illumina_nodenovo_global_genotyping
+pandora_illumina_withdenovo,0,0.0,1.0,0.5879647695280266,85.73912823776509,pandora_illumina_withdenovo_global_genotyping
+pandora_illumina_withdenovo,5,0.05,0.8,0.5545257756229605,85.56376880253721,pandora_illumina_withdenovo_global_genotyping
+pandora_nanopore_nodenovo,0,0.0,1.0,0.5710899945363668,85.03469643587202,pandora_nanopore_nodenovo_global_genotyping
+pandora_nanopore_nodenovo,10,0.05,0.6,0.4764375669908838,83.85392176191941,pandora_nanopore_nodenovo_global_genotyping
+pandora_nanopore_withdenovo,0,0.0,1.0,0.6076373636115906,85.5240157982732,pandora_nanopore_withdenovo_global_genotyping
+pandora_nanopore_withdenovo,10,0.05,0.6,0.50801191828872,84.42908717184548,pandora_nanopore_withdenovo_global_genotyping
+samtools,0,Not_App,Not_App,1.8355403443642608,82.22887902642208,samtools_NZ_CP009859.1
+samtools,5,Not_App,Not_App,1.004699434395906,82.01557748820119,samtools_NZ_CP009859.1
+snippy,5,Not_App,Not_App,0.03811683720529313,81.11531194441523,snippy_NZ_CP009859.1
+snippy,0,Not_App,Not_App,0.03811683720529313,81.11531194441523,snippy_NZ_CP009859.1

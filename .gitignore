@@ -40,3 +40,5 @@ scripts/pull_containers/paper_pandora2020_containers.zip
 scripts/create_package_of_repos/paper_pandora2020_code/
 
 scripts/create_package_of_repos/paper_pandora2020_code.zip
+
+scripts/csv_to_paper_plots/supplementary_table_1/.ipynb_checkpoints/

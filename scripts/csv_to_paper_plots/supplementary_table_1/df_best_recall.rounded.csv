@@ -1,0 +1,17 @@
+tool_category,coverage_threshold,strand_bias_threshold,gaps_threshold,error_rate,recalls_wrt_variants_found_wrt_alleles,tool
+medaka,10,Not_App,Not_App,19.54,84.4,medaka_NZ_CP009859.1
+medaka,0,Not_App,Not_App,19.54,84.4,medaka_NZ_CP009859.1
+nanopolish,0,Not_App,Not_App,3.27,81.8,nanopolish_NZ_CP009859.1
+nanopolish,10,Not_App,Not_App,3.09,81.8,nanopolish_NZ_CP009859.1
+pandora_illumina_nodenovo,0,0.0,1.0,0.59,85.0,pandora_illumina_nodenovo_global_genotyping
+pandora_illumina_nodenovo,5,0.05,0.8,0.56,84.8,pandora_illumina_nodenovo_global_genotyping
+pandora_illumina_withdenovo,0,0.0,1.0,0.59,85.7,pandora_illumina_withdenovo_global_genotyping
+pandora_illumina_withdenovo,5,0.05,0.8,0.55,85.6,pandora_illumina_withdenovo_global_genotyping
+pandora_nanopore_nodenovo,0,0.0,1.0,0.57,85.0,pandora_nanopore_nodenovo_global_genotyping
+pandora_nanopore_nodenovo,10,0.05,0.6,0.48,83.9,pandora_nanopore_nodenovo_global_genotyping
+pandora_nanopore_withdenovo,0,0.0,1.0,0.61,85.5,pandora_nanopore_withdenovo_global_genotyping
+pandora_nanopore_withdenovo,10,0.05,0.6,0.51,84.4,pandora_nanopore_withdenovo_global_genotyping
+samtools,0,Not_App,Not_App,1.84,82.2,samtools_NZ_CP009859.1
+samtools,5,Not_App,Not_App,1.0,82.0,samtools_NZ_CP009859.1
+snippy,5,Not_App,Not_App,0.04,81.1,snippy_NZ_CP009859.1
+snippy,0,Not_App,Not_App,0.04,81.1,snippy_NZ_CP009859.1
