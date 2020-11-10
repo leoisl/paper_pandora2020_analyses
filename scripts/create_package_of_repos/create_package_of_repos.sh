@@ -21,5 +21,5 @@ download_and_package_repo https://github.com/iqbal-lab-org/variant_callers_pipel
 download_and_package_repo https://github.com/leoisl/vcf_consensus_builder vcf_consensus_builder
 download_and_package_repo https://github.com/iqbal-lab-org/pandora_paper_roc pandora_paper_roc
 download_and_package_repo https://github.com/iqbal-lab-org/pandora_gene_distance pandora_gene_distance
-# download_and_package_repo https://github.com/iqbal-lab-org/paper_pandora2020_analyses  # TODO: uncomment this when repo goes public
+download_and_package_repo https://github.com/iqbal-lab-org/paper_pandora2020_analyses
 
