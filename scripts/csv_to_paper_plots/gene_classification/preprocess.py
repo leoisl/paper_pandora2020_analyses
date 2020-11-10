@@ -28,9 +28,9 @@ df_nanopore_normalised = read_df("gene_classification_by_gene_length_normalised.
 # In[3]:
 
 
-def get_plot_gene_classification(data, title, xaxis_title, yaxis_title):
+def get_plot_gene_classification(data, xaxis_title, yaxis_title):
     fig = px.bar(data, x="gene_length", y="count", color="classification")
-    fig.update_layout(title=title, xaxis_title=xaxis_title, yaxis_title=yaxis_title,
+    fig.update_layout(xaxis_title=xaxis_title, yaxis_title=yaxis_title,
                      font={"size": 20}, width=800, height=500)
     return fig
 
@@ -40,28 +40,24 @@ def get_plot_gene_classification(data, title, xaxis_title, yaxis_title):
 
 plot_illumina = get_plot_gene_classification(
     df_illumina,
-    title=f"Locus classification for pandora - Illumina - Raw counts",
     xaxis_title="Locus length",
     yaxis_title="Count")
 plot_illumina.write_image("gene_classification_by_gene_length.illumina.png")
 
 plot_illumina_normalised = get_plot_gene_classification(
     df_illumina_normalised,
-    title=f"Locus classification for pandora - Illumina - Normalised",
     xaxis_title="Locus length",
     yaxis_title="Proportion")
 plot_illumina_normalised.write_image("gene_classification_by_gene_length_normalised.illumina.png")
 
 plot_nanopore = get_plot_gene_classification(
     df_nanopore,
-    title=f"Locus classification for pandora - Nanopore - Raw counts",
     xaxis_title="Locus length",
     yaxis_title="Count")
 plot_nanopore.write_image("gene_classification_by_gene_length.nanopore.png")
 
 plot_nanopore_normalised = get_plot_gene_classification(
     df_nanopore_normalised,
-    title=f"Locus classification for pandora - Nanopore - Normalised",
     xaxis_title="Locus length",
     yaxis_title="Proportion")
 plot_nanopore_normalised.write_image("gene_classification_by_gene_length_normalised.nanopore.png")
