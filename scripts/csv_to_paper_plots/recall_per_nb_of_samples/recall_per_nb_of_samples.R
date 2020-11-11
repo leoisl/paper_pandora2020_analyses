@@ -53,7 +53,7 @@ illumina_variants = ggplot(df_illumina, aes(x=NUMBER_OF_SAMPLES, y=nb_of_found_P
   ylab("Number of pan-variants found") +
   xlab("Number of samples") +
   theme(legend.position = "None") + 
-  labs(tag="A") +
+  labs(tag="a") +
   theme(axis.text.x = element_text(angle = 45, hjust =1)) 
 
 
@@ -74,7 +74,7 @@ illumina_recall = ggplot(df_illumina, aes(x=NUMBER_OF_SAMPLES, y=recall_PVR, fil
   ylab("Pan-variants recall") +
   xlab("Number of samples") +
   theme(legend.position = "None") + 
-  labs(tag="C") +
+  labs(tag="c") +
   theme(axis.text.x = element_text(angle = 45, hjust =1)) 
 
 
@@ -96,7 +96,7 @@ illumina_avg_allelic_recall = ggplot(df_illumina, aes(x=NUMBER_OF_SAMPLES, y=rec
   ylab("Average allelic recall") +
   xlab("Number of samples") +
   theme(legend.position = "None") + 
-  labs(tag="A")+
+  labs(tag="a")+
   theme(axis.text.x = element_text(angle = 45, hjust =1)) 
 
 
@@ -128,7 +128,7 @@ nanopore_variants = ggplot(df_nanopore, aes(x=NUMBER_OF_SAMPLES, y=nb_of_found_P
   ylab("Number of pan-variants found") +
   xlab("Number of samples") +
   theme(legend.position = "None") + 
-  labs(tag="B") +
+  labs(tag="b") +
   theme(axis.text.x = element_text(angle = 45, hjust =1)) 
   
   
@@ -151,7 +151,7 @@ nanopore_recall = ggplot(df_nanopore, aes(x=NUMBER_OF_SAMPLES, y=recall_PVR, fil
   ylab("Pan-variants recall") +
   xlab("Number of samples") +
   theme(legend.position = "None") + 
-  labs(tag="D") +
+  labs(tag="d") +
   theme(axis.text.x = element_text(angle = 45, hjust =1)) 
 
 
@@ -173,7 +173,7 @@ nanopore_avg_allelic_recall = ggplot(df_nanopore, aes(x=NUMBER_OF_SAMPLES, y=rec
   ylab("Average allelic recall") +
   xlab("Number of samples") +
   theme(legend.position = "None") + 
-  labs(tag="B") +
+  labs(tag="b") +
   theme(axis.text.x = element_text(angle = 45, hjust =1)) 
 
 

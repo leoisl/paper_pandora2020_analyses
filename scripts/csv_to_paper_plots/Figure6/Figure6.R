@@ -47,7 +47,7 @@ illumina_20_way_plot <-ggplot(data=illumina_20_way_df,
                      breaks= seq(0.65, 0.9, by=0.05)) +
   scale_color_manual(values= c(illumina_colour_palette)) +
   theme(legend.position = "None") + 
-  labs(tag="A")
+  labs(tag="a")
 
 #=====================
 # Nanopore 20 way plot
@@ -72,7 +72,7 @@ nanopore_20_way_plot <-ggplot(data=nanopore_20_way_df,
                      breaks= seq(0.65, 0.9, by=0.05)) +
   scale_color_manual(values= c(nanopore_colour_palette)) +
   theme(legend.position = "None") + 
-  labs(tag="B")
+  labs(tag="b")
 
 #=========================
 # Illumina precision plot
@@ -104,7 +104,7 @@ illumina_precision_plot = ggplot(precision_per_sample_illumina_df,
   ylab("Precision") +
   xlab("Sample") +
   theme(legend.position = "None") + 
-  labs(tag="C")
+  labs(tag="c")
 
 
 
@@ -138,7 +138,7 @@ nanopore_precision_plot = ggplot(precision_per_sample_nanopore_df,
   ylab("Precision") +
   xlab("Sample") +
   theme(legend.position = "None") + 
-  labs(tag="D")
+  labs(tag="d")
 
 
 #=================

@@ -47,7 +47,7 @@ illumina_20_way_plot <-ggplot(data=illumina_20_way_df,
                      breaks= seq(0.65, 0.85, by=0.05)) +
   scale_color_manual(values= c(illumina_colour_palette)) +
   theme(legend.position = "None") +
-  labs(tag="A")
+  labs(tag="a")
 
 #=====================
 # Nanopore 20 way plot
@@ -72,7 +72,7 @@ nanopore_20_way_plot <-ggplot(data=nanopore_20_way_df,
                      breaks= seq(0.65, 0.85, by=0.05)) +
   scale_color_manual(values= c(nanopore_colour_palette)) +
   theme(legend.position = "None") +
-  labs(tag="B")
+  labs(tag="b")
 
 
 #=====================
@@ -92,7 +92,7 @@ illumina_20_way_filtered_plot <-ggplot(data=illumina_20_way_df_filtered,
                      breaks= seq(0.65, 0.85, by=0.05)) +
   scale_color_manual(values= c(illumina_colour_palette)) +
   theme(legend.position = "None") +
-  labs(tag="C")
+  labs(tag="c")
 
 #=====================
 # Nanopore 20 way plot
@@ -111,7 +111,7 @@ nanopore_20_way_filtered_plot <-ggplot(data=nanopore_20_way_df_filtered,
                      breaks= seq(0.65, 0.85, by=0.05)) +
   scale_color_manual(values= c(nanopore_colour_palette)) +
   theme(legend.position = "None") +
-  labs(tag="D")
+  labs(tag="d")
 
 
 

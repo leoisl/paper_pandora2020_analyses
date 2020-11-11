@@ -11,10 +11,10 @@ gene_classification_nanopore_normalised <- grid::rasterGrob(readPNG("gene_classi
 
 
 gridExtra::grid.arrange(
-  arrangeGrob(gene_classification_illumina_normalised, top = textGrob("A",  x = 0.05, gp=gpar(fontsize=30))),
-  arrangeGrob(gene_classification_illumina, top = textGrob("B",  x = 0.05, gp=gpar(fontsize=30))),
-  arrangeGrob(gene_classification_nanopore_normalised, top = textGrob("C",  x = 0.05, gp=gpar(fontsize=30))),
-  arrangeGrob(gene_classification_nanopore, top = textGrob("D",  x = 0.05, gp=gpar(fontsize=30))),
+  arrangeGrob(gene_classification_illumina_normalised, top = textGrob("a",  x = 0.05, gp=gpar(fontsize=30))),
+  arrangeGrob(gene_classification_illumina, top = textGrob("b",  x = 0.05, gp=gpar(fontsize=30))),
+  arrangeGrob(gene_classification_nanopore_normalised, top = textGrob("c",  x = 0.05, gp=gpar(fontsize=30))),
+  arrangeGrob(gene_classification_nanopore, top = textGrob("d",  x = 0.05, gp=gpar(fontsize=30))),
   ncol=2
   )
 

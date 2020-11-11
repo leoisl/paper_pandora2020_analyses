@@ -7,8 +7,8 @@ Figure1a <- grid::rasterGrob(readPNG("Figure1a/Figure1a.proportion.png"))
 Figure1b <- grid::rasterGrob(readPNG("Figure1b/Figure1b.png"))
 
 Figure1 <- gridExtra::grid.arrange(
-  arrangeGrob(Figure1a, top = textGrob("A",  x = 0.05, gp=gpar(fontsize=20))),
-  arrangeGrob(Figure1b, top = textGrob("B",  x = 0.05, gp=gpar(fontsize=20))),
+  arrangeGrob(Figure1a, top = textGrob("a",  x = 0.05, gp=gpar(fontsize=20))),
+  arrangeGrob(Figure1b, top = textGrob("b",  x = 0.05, gp=gpar(fontsize=20))),
   nrow=1
 )
 
