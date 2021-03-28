@@ -5,7 +5,7 @@ MEMORY=20000
 LOCAL_CORES=20
 LOG_DIR=logs_4_way/
 JOB_NAME="pandora1_paper_full_pipeline_4_way"
-SINGULARITY_PREFIX="/hps/nobackup2/singularity/leandro/"
+SINGULARITY_PREFIX="/hps/nobackup/iqbal/leandro/singularity_cache"
 profile="lsf"
 
 mkdir -p "$LOG_DIR"
