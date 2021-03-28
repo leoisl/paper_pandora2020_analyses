@@ -67,9 +67,9 @@ rule install_pandora_workflow:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive https://github.com/iqbal-lab-org/pandora_workflow && \
+        git clone --recursive https://github.com/leoisl/pandora_workflow && \
         cd pandora_workflow && \
-        git checkout pandora_paper_tag1 && \
+        git checkout master && \
         ./setup.sh
         """
 
@@ -99,9 +99,9 @@ rule install_pandora_paper_roc:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive https://github.com/iqbal-lab-org/pandora_paper_roc && \
+        git clone --recursive https://github.com/leoisl/pandora_paper_roc && \
         cd pandora_paper_roc && \
-        git checkout pandora_paper_tag1 && \
+        git checkout master && \
         ./setup.sh
         """
 
@@ -116,8 +116,8 @@ rule install_pandora_gene_distance:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive https://github.com/iqbal-lab-org/pandora_gene_distance && \
+        git clone --recursive https://github.com/leoisl/pandora_gene_distance && \
         cd pandora_gene_distance && \
-        git checkout pandora_paper_tag1 && \
+        git checkout master && \
         ./setup.sh
         """
