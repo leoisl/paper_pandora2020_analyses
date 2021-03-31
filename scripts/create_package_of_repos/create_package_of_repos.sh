@@ -7,7 +7,7 @@ cd paper_pandora2020_code
 download_and_package_repo () {
   URL=$1
   name=$2
-  git clone --depth 1 --branch pandora_paper_update_31_03_2021 "$URL"
+  git clone --recursive --depth 1 --branch pandora_paper_update_31_03_2021 "$URL"
   zip -r "$name.zip" "$name"
 }
 
