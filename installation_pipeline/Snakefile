@@ -37,7 +37,7 @@ rule install_pangenome_variations:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/pangenome_variations && \
         cd pangenome_variations && \
-        git checkout pandora_paper_tag1 && \
+        git checkout pandora_paper_update_31_03_2021 && \
         ./setup.sh
         """
 
@@ -53,7 +53,7 @@ rule install_subsampler:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/subsampler && \
         cd subsampler && \
-        git checkout pandora_paper_tag1 && \
+        git checkout pandora_paper_update_31_03_2021 && \
         ./setup.sh
         """
 
@@ -69,7 +69,7 @@ rule install_pandora_workflow:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/pandora_workflow && \
         cd pandora_workflow && \
-        git checkout pandora_paper_tag1 && \
+        git checkout pandora_paper_update_31_03_2021 && \
         ./setup.sh
         """
 
@@ -85,7 +85,7 @@ rule install_variant_callers_pipeline:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/variant_callers_pipeline && \
         cd variant_callers_pipeline && \
-        git checkout pandora_paper_tag1 && \
+        git checkout pandora_paper_update_31_03_2021 && \
         ./setup.sh
         """
 
@@ -101,7 +101,7 @@ rule install_pandora_paper_roc:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/pandora_paper_roc && \
         cd pandora_paper_roc && \
-        git checkout pandora_paper_tag1 && \
+        git checkout pandora_paper_update_31_03_2021 && \
         ./setup.sh
         """
 
@@ -118,6 +118,6 @@ rule install_pandora_gene_distance:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/pandora_gene_distance && \
         cd pandora_gene_distance && \
-        git checkout pandora_paper_tag1 && \
+        git checkout pandora_paper_update_31_03_2021 && \
         ./setup.sh
         """
