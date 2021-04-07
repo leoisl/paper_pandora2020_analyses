@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -eux
 
-MEMORY=350000
-LOCAL_CORES=95
+MEMORY=20000
+LOCAL_CORES=20
 LOG_DIR=logs/
 JOB_NAME="pandora1_paper_full_pipeline"
 SINGULARITY_PREFIX="/hps/nobackup/iqbal/leandro/singularity_cache"
