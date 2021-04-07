@@ -102,9 +102,8 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
-  || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
+  snakemake -j ${LOCAL_CORES} --configfile config.pandora_paper_tag1.yaml --use-singularity \
+  --singularity-prefix "${singularity_prefix}" || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
@@ -119,9 +118,8 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline with filters..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_filters.pandora_paper_tag1.yaml --singularity-prefix "${singularity_prefix}" \
-  || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
+  snakemake -j ${LOCAL_CORES} --configfile config.pandora_filters.pandora_paper_tag1.yaml --use-singularity \
+  --singularity-prefix "${singularity_prefix}" || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
   touch "${flag_file}"  # marks this pipeline as done
