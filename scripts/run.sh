@@ -102,7 +102,7 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" \
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --conda-frontend conda \
     --groups calculate_precision_per_sample_no_gt_conf=group_calculate_precision_per_sample_no_gt_conf --group-components group_calculate_precision_per_sample_no_gt_conf=10 \
     --groups calculate_recall_per_sample_no_gt_conf_filter=group_calculate_recall_per_sample_no_gt_conf_filter --group-components group_calculate_recall_per_sample_no_gt_conf_filter=10 \
     --groups calculate_recall_per_sample_vs_nb_of_samples=group_calculate_recall_per_sample_vs_nb_of_samples --group-components group_calculate_recall_per_sample_vs_nb_of_samples=10 \
