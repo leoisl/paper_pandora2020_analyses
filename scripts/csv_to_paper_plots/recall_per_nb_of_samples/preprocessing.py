@@ -34,8 +34,8 @@ def cleanup_avgar_df(df):
 
 def process_df(df, pvr):
     # remove nodenovo results
-    df = df[df.tool!="pandora_illumina_nodenovo_global_genotyping"]
-    df = df[df.tool!="pandora_nanopore_nodenovo_global_genotyping"]
+    df = df[df.tool!="pandora_illumina_nodenovo"]
+    df = df[df.tool!="pandora_nanopore_nodenovo"]
     
     # add tool_category column
     df["tool_long_description"] = df["tool"]

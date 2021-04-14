@@ -20,9 +20,9 @@ df
 df["tool_long_name"] = df["tool"]
 
 def get_tool_category(tool):
-    if tool == "pandora_illumina_nodenovo_global_genotyping":
+    if tool == "pandora_illumina_nodenovo":
         return "pandora no denovo"
-    elif tool == "pandora_illumina_withdenovo_global_genotyping":
+    elif tool == "pandora_illumina_withdenovo":
         return "pandora with denovo"
     else:
         return tool.split("_")[0]
