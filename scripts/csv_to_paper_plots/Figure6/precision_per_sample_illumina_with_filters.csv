@@ -1,24 +1,24 @@
 tool,sample,precision,ref,tool_and_ref
-pandora,063_STEC,0.9947928856918724,PRG,Pandora illumina with denovo / PRG
-pandora,CFT073,0.9937534833899596,PRG,Pandora illumina with denovo / PRG
-pandora,MINF_1A,0.9945919949549502,PRG,Pandora illumina with denovo / PRG
-pandora,MINF_1D,0.9937914438763767,PRG,Pandora illumina with denovo / PRG
-pandora,MINF_7C,0.9946239318351242,PRG,Pandora illumina with denovo / PRG
-pandora,MINF_8D,0.9940330701320108,PRG,Pandora illumina with denovo / PRG
-pandora,MINF_9A,0.9949845941610704,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_1A,0.9946318214433876,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_3B,0.9944809218659644,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_4E,0.994528636778842,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_4I,0.9935383939642556,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_6C,0.994793964822388,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_7A,0.994584111515508,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_7C,0.994150362645806,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_8B,0.99434314514666,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_8G,0.9946534465991996,PRG,Pandora illumina with denovo / PRG
-pandora,MSB1_9D,0.9943491591813732,PRG,Pandora illumina with denovo / PRG
-pandora,MSB2_1A,0.9945901944920644,PRG,Pandora illumina with denovo / PRG
-pandora,H131800734,0.9945639593392224,PRG,Pandora illumina with denovo / PRG
-pandora,ST38,0.9952858773122901,PRG,Pandora illumina with denovo / PRG
+pandora,063_STEC,0.9948187509825008,PRG,Pandora illumina with denovo / PRG
+pandora,CFT073,0.9939771196953836,PRG,Pandora illumina with denovo / PRG
+pandora,MINF_1A,0.994960698730632,PRG,Pandora illumina with denovo / PRG
+pandora,MINF_1D,0.993899194877164,PRG,Pandora illumina with denovo / PRG
+pandora,MINF_7C,0.99520298443061,PRG,Pandora illumina with denovo / PRG
+pandora,MINF_8D,0.9943408647960268,PRG,Pandora illumina with denovo / PRG
+pandora,MINF_9A,0.9954798355667686,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_1A,0.9949172699057824,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_3B,0.9952712214328244,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_4E,0.9948038086962204,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_4I,0.9941163028734952,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_6C,0.9955713220559852,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_7A,0.9952981811550488,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_7C,0.9947253163664399,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_8B,0.9945033797639906,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_8G,0.9948457828934202,PRG,Pandora illumina with denovo / PRG
+pandora,MSB1_9D,0.9942824117723056,PRG,Pandora illumina with denovo / PRG
+pandora,MSB2_1A,0.9946841198253054,PRG,Pandora illumina with denovo / PRG
+pandora,H131800734,0.9945383793407596,PRG,Pandora illumina with denovo / PRG
+pandora,ST38,0.9954804463144256,PRG,Pandora illumina with denovo / PRG
 samtools,063_STEC,0.9935613407487311,LF82 (NC_011993.1),Samtools / LF82 (NC_011993.1)
 samtools,CFT073,0.9936911294565596,LF82 (NC_011993.1),Samtools / LF82 (NC_011993.1)
 samtools,MINF_1A,0.9932458671148636,LF82 (NC_011993.1),Samtools / LF82 (NC_011993.1)

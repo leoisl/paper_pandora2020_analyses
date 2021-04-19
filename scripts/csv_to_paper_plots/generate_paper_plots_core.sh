@@ -56,32 +56,32 @@ echo "Generating Figure 9..."
 cd two_SNP_heatmap && bash produce_figure.sh && cd ..
 cp two_SNP_heatmap/Figure9.png paper_pandora2020_plots/Figure9.png
 
-#echo "Generating Figure 10..."
-#cd Figure10 && bash produce_figure.sh && cd ..
-#cp Figure10/loci_ref_sample_approximation_ed_1.png paper_pandora2020_plots/Figure10.png
-#cp Figure10/loci_ref_sample_approximation_ed_0.png paper_pandora2020_plots/SupplementaryFigureA10.png
+echo "Generating Figure 10..."
+cd Figure10 && bash produce_figure.sh && cd ..
+cp Figure10/loci_ref_sample_approximation_ed_1.png paper_pandora2020_plots/Figure10.png
+cp Figure10/loci_ref_sample_approximation_ed_0.png paper_pandora2020_plots/SupplementaryFigureA10.png
 
-#echo "Generating Supplementary Figure A.3"
-#cd gene_classification && bash produce_figure.sh && cd ..
-#cp gene_classification/gene_classification.png paper_pandora2020_plots/SupplementaryFigureA3.png
-#
-#echo "Generating Supplementary Figure A.5-9"
-#cd recall_per_ref_per_clade_supplementary && bash produce_figure.sh && cd ..
-#cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_snippy_pandora.png paper_pandora2020_plots/SupplementaryFigureA5.png
-#cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_samtools_pandora.png paper_pandora2020_plots/SupplementaryFigureA6.png
-#cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_medaka_pandora.png paper_pandora2020_plots/SupplementaryFigureA7.png
-#cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_nanopolish_pandora.png paper_pandora2020_plots/SupplementaryFigureA8.png
-#cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.png paper_pandora2020_plots/SupplementaryFigureA9.png
-#
-#echo "Generating Supplementary Figure A.11"
-#cp pangenome_variants/pangenome_variants.png paper_pandora2020_plots/SupplementaryFigureA11.png
-#
-#echo "Generating Supplementary Animation 1"
-#cp supplementary_animation_1/SupplementaryAnimation1.mov paper_pandora2020_plots/SupplementaryAnimation1.mov
-#
-#echo "Generating Supplementary Animation 2"
-#cd supplementary_animation_2 && bash produce_figure.sh && cd ..
-#cp supplementary_animation_2/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.gif paper_pandora2020_plots/SupplementaryAnimation2.gif
+echo "Generating Supplementary Figure A.3"
+cd gene_classification && bash produce_figure.sh && cd ..
+cp gene_classification/gene_classification.png paper_pandora2020_plots/SupplementaryFigureA3.png
+
+echo "Generating Supplementary Figure A.5-9"
+cd recall_per_ref_per_clade_supplementary && bash produce_figure.sh && cd ..
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_snippy_pandora.png paper_pandora2020_plots/SupplementaryFigureA5.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_samtools_pandora.png paper_pandora2020_plots/SupplementaryFigureA6.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_medaka_pandora.png paper_pandora2020_plots/SupplementaryFigureA7.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_clade_nanopolish_pandora.png paper_pandora2020_plots/SupplementaryFigureA8.png
+cp recall_per_ref_per_clade_supplementary/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.png paper_pandora2020_plots/SupplementaryFigureA9.png
+
+echo "Generating Supplementary Figure A.11"
+cp pangenome_variants/pangenome_variants.png paper_pandora2020_plots/SupplementaryFigureA11.png
+
+echo "Generating Supplementary Animation 1"
+cp supplementary_animation_1/SupplementaryAnimation1.mov paper_pandora2020_plots/SupplementaryAnimation1.mov
+
+echo "Generating Supplementary Animation 2"
+cd supplementary_animation_2 && bash produce_figure.sh && cd ..
+cp supplementary_animation_2/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.gif paper_pandora2020_plots/SupplementaryAnimation2.gif
 
 echo "Generating package..."
 zip -r paper_pandora2020_plots.zip paper_pandora2020_plots
