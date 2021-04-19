@@ -54,8 +54,7 @@ cp -vr "${pipeline_output}/pangenome_variations/output_pangenome_variations_pand
 
 # illumina/nanopore analysis
 technologies=("illumina" "nanopore")
-# filters=("" "_with_filters")
-filters=("")
+filters=("" "_with_filters")
 for technology in "${technologies[@]}"; do
   for filter in "${filters[@]}"; do
     mkdir -p "${output_dir}/${technology}_analysis${filter}"
@@ -101,16 +100,16 @@ for technology in "${technologies[@]}"; do
     "${output_dir}/${technology}_analysis${filter}/ROC_data.tsv"
 
 
-  #  # pandora_gene_distance
-  #  if [ "$filter" = "" ]
-  #  then
-  #    mkdir -p "${output_dir}/${technology}_analysis/FP_genes"
-  #    cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/FP_genes/pandora_${technology}_100x_nodenovo"   "${output_dir}/${technology}_analysis/FP_genes/pandora_${technology}_100x_nodenovo"
-  #    cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/FP_genes/pandora_${technology}_100x_withdenovo" "${output_dir}/${technology}_analysis/FP_genes/pandora_${technology}_100x_withdenovo"
-  #    mkdir -p "${output_dir}/${technology}_analysis/gene_distance_plots"
-  #    cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/gene_distance_plots/pandora_${technology}_100x_nodenovo"   "${output_dir}/${technology}_analysis/gene_distance_plots/pandora_${technology}_100x_nodenovo"
-  #    cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/gene_distance_plots/pandora_${technology}_100x_withdenovo" "${output_dir}/${technology}_analysis/gene_distance_plots/pandora_${technology}_100x_withdenovo"
-  #  fi
+    # pandora_gene_distance
+    if [ "$filter" = "" ]
+    then
+      mkdir -p "${output_dir}/${technology}_analysis/FP_genes"
+      cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/FP_genes/pandora_${technology}_100x_nodenovo"   "${output_dir}/${technology}_analysis/FP_genes/pandora_${technology}_100x_nodenovo"
+      cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/FP_genes/pandora_${technology}_100x_withdenovo" "${output_dir}/${technology}_analysis/FP_genes/pandora_${technology}_100x_withdenovo"
+      mkdir -p "${output_dir}/${technology}_analysis/gene_distance_plots"
+      cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/gene_distance_plots/pandora_${technology}_100x_nodenovo"   "${output_dir}/${technology}_analysis/gene_distance_plots/pandora_${technology}_100x_nodenovo"
+      cp -vr "${pipeline_output}/pandora_gene_distance/gene_distance_pandora_paper_tag1/gene_distance_plots/pandora_${technology}_100x_withdenovo" "${output_dir}/${technology}_analysis/gene_distance_plots/pandora_${technology}_100x_withdenovo"
+    fi
   done
 done
 
@@ -122,23 +121,6 @@ for filter in "${filters[@]}"; do
   run_filters_with_specific_tools "${pipeline_output}" "${output_dir}" "nanopore" "medaka" "${filter}"
   run_filters_with_specific_tools "${pipeline_output}" "${output_dir}" "nanopore" "nanopolish" "${filter}"
 done
-
-# remove uninteresting csvs
-#rm -v "${output_dir}/illumina_analysis/FP_genes/pandora_illumina_100x_nodenovo/gene_and_nb_of_FPs_counted.csv"
-#rm -v "${output_dir}/illumina_analysis/FP_genes/pandora_illumina_100x_withdenovo/gene_and_nb_of_FPs_counted.csv"
-#rm -v "${output_dir}/nanopore_analysis/FP_genes/pandora_nanopore_100x_nodenovo/gene_and_nb_of_FPs_counted.csv"
-#rm -v "${output_dir}/nanopore_analysis/FP_genes/pandora_nanopore_100x_withdenovo/gene_and_nb_of_FPs_counted.csv"
-#
-#rm -v "${output_dir}/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
-#rm -v "${output_dir}/illumina_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
-#rm -v "${output_dir}/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
-#rm -v "${output_dir}/nanopore_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_avgar.tsv"
-#
-#rm -v "${output_dir}/illumina_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
-#rm -v "${output_dir}/illumina_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
-#rm -v "${output_dir}/nanopore_analysis/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
-#rm -v "${output_dir}/nanopore_analysis_with_filters/recall_per_nb_of_samples/recall_per_nb_of_samples_pvr.tsv"
-
 
 # create the package
 zip -r "${output_dir}.zip" "${output_dir}"
