@@ -119,8 +119,10 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline old basecall..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.4_way_old_basecall.yaml --singularity-prefix "${singularity_prefix}" \
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" \
+    --groups calculate_precision_per_sample_no_gt_conf=group_1 calculate_recall_per_sample_no_gt_conf_filter=group_2 calculate_recall_per_sample_vs_nb_of_samples=group_3 create_precision_report_from_probe_mappings=group_4 create_recall_report_for_truth_variants_mappings=group_5 create_recall_report_per_sample_for_calculator=group_6 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_medaka=group_7 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_nanopolish=group_8 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_samtools=group_9 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_snippy=group_10 fix_medaka_vcf_for_pipeline=group_11 fix_nanopolish_vcf_for_pipeline=group_12 fix_samtools_vcf_for_pipeline=group_13 fix_snippy_vcf_for_pipeline=group_14 make_mutated_vcf_ref_for_recall=group_15 make_variant_calls_probeset_for_precision=group_16 make_vcf_for_a_single_sample=group_17 map_recall_truth_probeset_to_mutated_vcf_ref=group_18 map_variant_call_probeset_to_reference_assembly=group_19 \
+    --group-components group_1=10 group_2=10 group_3=10 group_4=10 group_5=10 group_6=5 group_7=10 group_8=10 group_9=10 group_10=10 group_11=10 group_12=10 group_13=10 group_14=10 group_15=10 group_16=10 group_17=10 group_18=10 group_19=10 \
+    --configfile config.pandora_paper_tag1.4_way_old_basecall.yaml --singularity-prefix "${singularity_prefix}" \
   || { echo 'FATAL ERROR: pandora_paper_roc pipeline failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -135,8 +137,10 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline new basecall..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-                --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix "${singularity_prefix}" \
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" \
+    --groups calculate_precision_per_sample_no_gt_conf=group_1 calculate_recall_per_sample_no_gt_conf_filter=group_2 calculate_recall_per_sample_vs_nb_of_samples=group_3 create_precision_report_from_probe_mappings=group_4 create_recall_report_for_truth_variants_mappings=group_5 create_recall_report_per_sample_for_calculator=group_6 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_medaka=group_7 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_nanopolish=group_8 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_samtools=group_9 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_snippy=group_10 fix_medaka_vcf_for_pipeline=group_11 fix_nanopolish_vcf_for_pipeline=group_12 fix_samtools_vcf_for_pipeline=group_13 fix_snippy_vcf_for_pipeline=group_14 make_mutated_vcf_ref_for_recall=group_15 make_variant_calls_probeset_for_precision=group_16 make_vcf_for_a_single_sample=group_17 map_recall_truth_probeset_to_mutated_vcf_ref=group_18 map_variant_call_probeset_to_reference_assembly=group_19 \
+    --group-components group_1=10 group_2=10 group_3=10 group_4=10 group_5=10 group_6=5 group_7=10 group_8=10 group_9=10 group_10=10 group_11=10 group_12=10 group_13=10 group_14=10 group_15=10 group_16=10 group_17=10 group_18=10 group_19=10 \
+    --configfile config.pandora_paper_tag1.4_way_new_basecall.yaml --singularity-prefix "${singularity_prefix}" \
    || { echo 'FATAL ERROR: pandora_paper_roc pipeline new basecall failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -151,8 +155,10 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline with filters..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.4_way_pandora_filters.yaml --singularity-prefix "${singularity_prefix}" \
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" \
+    --groups calculate_precision_per_sample_no_gt_conf=group_1 calculate_recall_per_sample_no_gt_conf_filter=group_2 calculate_recall_per_sample_vs_nb_of_samples=group_3 create_precision_report_from_probe_mappings=group_4 create_recall_report_for_truth_variants_mappings=group_5 create_recall_report_per_sample_for_calculator=group_6 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_medaka=group_7 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_nanopolish=group_8 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_samtools=group_9 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_snippy=group_10 fix_medaka_vcf_for_pipeline=group_11 fix_nanopolish_vcf_for_pipeline=group_12 fix_samtools_vcf_for_pipeline=group_13 fix_snippy_vcf_for_pipeline=group_14 make_mutated_vcf_ref_for_recall=group_15 make_variant_calls_probeset_for_precision=group_16 make_vcf_for_a_single_sample=group_17 map_recall_truth_probeset_to_mutated_vcf_ref=group_18 map_variant_call_probeset_to_reference_assembly=group_19 \
+    --group-components group_1=10 group_2=10 group_3=10 group_4=10 group_5=10 group_6=5 group_7=10 group_8=10 group_9=10 group_10=10 group_11=10 group_12=10 group_13=10 group_14=10 group_15=10 group_16=10 group_17=10 group_18=10 group_19=10 \
+    --configfile config.pandora_paper_tag1.4_way_pandora_filters.yaml --singularity-prefix "${singularity_prefix}" \
    || { echo 'FATAL ERROR: pandora_paper_roc pipeline with filters failed;' ; exit 1; }
   deactivate
   cd ../../
@@ -167,8 +173,10 @@ if ! test -f "${flag_file}"; then
   echo "Running pandora_paper_roc pipeline with filters for illumina..."
   cd ${pipeline_output}/pandora_paper_roc
   source venv/bin/activate
-  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" --keep-going \
-            --configfile config.pandora_paper_tag1.4_way_pandora_filters.illumina.yaml --singularity-prefix "${singularity_prefix}" \
+  snakemake --local-cores "$LOCAL_CORES" --profile "$profile" \
+    --groups calculate_precision_per_sample_no_gt_conf=group_1 calculate_recall_per_sample_no_gt_conf_filter=group_2 calculate_recall_per_sample_vs_nb_of_samples=group_3 create_precision_report_from_probe_mappings=group_4 create_recall_report_for_truth_variants_mappings=group_5 create_recall_report_per_sample_for_calculator=group_6 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_medaka=group_7 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_nanopolish=group_8 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_samtools=group_9 filter_vcf_for_a_single_sample_by_gt_conf_percentile_for_snippy=group_10 fix_medaka_vcf_for_pipeline=group_11 fix_nanopolish_vcf_for_pipeline=group_12 fix_samtools_vcf_for_pipeline=group_13 fix_snippy_vcf_for_pipeline=group_14 make_mutated_vcf_ref_for_recall=group_15 make_variant_calls_probeset_for_precision=group_16 make_vcf_for_a_single_sample=group_17 map_recall_truth_probeset_to_mutated_vcf_ref=group_18 map_variant_call_probeset_to_reference_assembly=group_19 \
+    --group-components group_1=10 group_2=10 group_3=10 group_4=10 group_5=10 group_6=5 group_7=10 group_8=10 group_9=10 group_10=10 group_11=10 group_12=10 group_13=10 group_14=10 group_15=10 group_16=10 group_17=10 group_18=10 group_19=10 \
+    --configfile config.pandora_paper_tag1.4_way_pandora_filters.illumina.yaml --singularity-prefix "${singularity_prefix}" \
    || { echo 'FATAL ERROR: pandora_paper_roc pipeline with filters for illumina failed;' ; exit 1; }
   deactivate
   cd ../../
