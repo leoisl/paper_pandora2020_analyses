@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -eu
 
-# package_20_way_URL="https://www.dropbox.com/s/kfitwnuor7873zx/pandora1_paper_analysis_output_20_way_27_10_2020.zip?dl=1"
-package_4_way_URL="https://www.dropbox.com/s/1jurbe31tgjv1oh/pandora1_paper_analysis_output_4_way_28_09_2020.zip?dl=1"
+package_20_way_URL="https://www.dropbox.com/s/437u9wdgn79dvrq/pandora1_paper_analysis_output_20_way.zip?dl=1"
+package_4_way_URL="https://www.dropbox.com/s/pp4cxox2rhrqquw/pandora1_paper_analysis_output_4_way.zip?dl=1"
 
-#if [ ! -d "pandora1_paper_analysis_output_20_way" ]
-#then
-#    echo "Creating pandora1_paper_analysis_output_20_way ..."
-#    wget "$package_20_way_URL" -O pandora1_paper_analysis_output_20_way.zip
-#    unzip pandora1_paper_analysis_output_20_way.zip
-#fi
+if [ ! -d "pandora1_paper_analysis_output_20_way" ]
+then
+    echo "Creating pandora1_paper_analysis_output_20_way ..."
+    wget "$package_20_way_URL" -O pandora1_paper_analysis_output_20_way.zip
+    unzip pandora1_paper_analysis_output_20_way.zip
+fi
 
 if [ ! -d "pandora1_paper_analysis_output_4_way" ]
 then
