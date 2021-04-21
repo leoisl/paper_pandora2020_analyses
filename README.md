@@ -27,12 +27,12 @@ cd installation_pipeline && ./setup.sh
 
 ## Running on the paper data on an LSF cluster (on 20-way):
 
-1. `git checkout pandora_paper_tag1`
+1. `git checkout pandora_paper_update_31_03_2021`
 2. `scripts/submit_lsf.sh <input_data_folder> <pipeline_output>`
 
 ## Running on the paper data on an LSF cluster (on 4-way):
 
-1. `git checkout pandora_paper_tag1`
+1. `git checkout pandora_paper_update_31_03_2021`
 2. `scripts/submit_lsf_4_way.sh <input_data_folder> <pipeline_output>`
 
 ## Packaging 20- and 4-way results
@@ -47,7 +47,7 @@ computed with the previous commands. It creates two zip packages, `pandora1_pape
 The two previously described packages were already pre-computed and made available. To download, extract, and use them 
 to create the plots in the paper, please do:
 
-1. `git checkout pandora_paper_tag1`
+1. `git checkout pandora_paper_update_31_03_2021`
 2. `cd scripts/csv_to_paper_plots && ./generate_paper_plots.sh`
 
 
