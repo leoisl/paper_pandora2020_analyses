@@ -37,7 +37,7 @@ rule install_pangenome_variations:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/pangenome_variations && \
         cd pangenome_variations && \
-        git checkout pandora_paper_update_31_03_2021 && \
+        git checkout adding_strand_info && \
         ./setup.sh
         """
 
