@@ -214,8 +214,41 @@ custom_legend<-g_legend(custom_legend_plot)
 
 
 #=====================================
-# Make multi-panel fig and write out 
+# Nanopore only legend
 #=====================================
+df_legend = rbind(df_nanopore)
+
+custom_legend_nanopore_only_plot = ggplot(df_legend, aes(x=NUMBER_OF_SAMPLES, y=recall_AvgAR, fill=tool)) +
+  geom_boxplot(data = df_legend[df_legend$tool != "pandora with denovo", ],
+               aes(group=interaction(NUMBER_OF_SAMPLES, tool)),
+               outlier.colour="black", outlier.shape=8,
+               outlier.size = 0.5, position=position_dodge(1)) +
+  geom_line(data = df_legend[df_legend$tool == "pandora with denovo", ],
+            aes(x=NUMBER_OF_SAMPLES, y=recall_AvgAR,  linetype = "dashed"),
+            inherit.aes = FALSE, size=0.5, group = 1) +
+  scale_fill_manual(values=c(nanopore_colour_palette[2:1]),
+                    name="", labels = c("nanopolish","medaka")) +
+  scale_linetype_manual(name="", labels=c(custom_label), values=c("dashed" = "dashed"))+
+  ylim(0, 1) +
+  ylab("Average allelic recall") +
+  xlab("Number of samples") +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)}
+
+custom_legend_nanopore_only<-g_legend(custom_legend_nanopore_only_plot)
+
+# #=====================================
+# # Make multi-panel fig and write out
+# #=====================================
+nanopore_only_fig = grid.arrange(arrangeGrob(nanopore_variants+labs(tag="a"), nanopore_recall+labs(tag="b"), nrow=1),
+                            custom_legend_nanopore_only, nrow=2, heights=c(5,1))
+ggsave(nanopore_only_fig, file="Figure7.png", width=15, height=5, dpi=300)
+
 
 
 top_half_fig = grid.arrange(arrangeGrob(illumina_variants, 
@@ -227,10 +260,7 @@ bottom_half_fig = grid.arrange(arrangeGrob(illumina_recall,
                                            nrow=1))
 final_plot = grid.arrange(top_half_fig, bottom_half_fig)
 
-
-
-
-ggsave(final_plot, file="Figure7.png", width=15, height=10, dpi=300)
+ggsave(final_plot, file="SupplementaryFigureReviewA1.png", width=15, height=10, dpi=300)
 
 
 
@@ -239,9 +269,6 @@ supp_fig = grid.arrange(arrangeGrob(illumina_avg_allelic_recall,
                                     nanopore_avg_allelic_recall,
                                     nrow=1),
                         custom_legend, nrow=2, heights=c(10,1))
-
-
-
 
 ggsave(supp_fig, file="SupplementaryFigureA4.png", width=15, height=5, dpi=300)
 
