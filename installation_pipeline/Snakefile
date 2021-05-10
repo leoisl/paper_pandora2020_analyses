@@ -101,7 +101,7 @@ rule install_pandora_paper_roc:
         cd {output_dir} && \
         git clone --recursive https://github.com/iqbal-lab-org/pandora_paper_roc && \
         cd pandora_paper_roc && \
-        git checkout pandora_paper_update_31_03_2021 && \
+        git checkout adding_strand_info && \
         ./setup.sh
         """
 
