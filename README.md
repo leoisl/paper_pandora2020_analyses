@@ -314,7 +314,7 @@ Main file: `pangenome_variations_per_nb_of_samples.csv`
 
 Preview:
 ```
-PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
+PVID,NUMBER_OF_SAMPLES
 0,2
 1,4
 2,2
@@ -323,7 +323,7 @@ PANGENOME_VARIATION_ID,NUMBER_OF_SAMPLES
 
 Fields explanation:
 
-* `PANGENOME_VARIATION_ID`: the identifier of the pangenome variation;
+* `PVID`: the identifier of the pangenome variation;
 * `NUMBER_OF_SAMPLES`: the number of samples the specified pangenome variation is in;
 
 
