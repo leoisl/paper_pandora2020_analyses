@@ -30,7 +30,7 @@ library("ggplot2")
 library(ggthemr)
 
 ggthemr('fresh')
-set_swatch(c("#b5b5b5", "#2e3192", "#fbb03b", "#8cc63f", "#ed1c24", "#93278f", "#29abe2"))
+set_swatch(c("#ff6666","#ffdd66","#66ddcc","#0099ff","#9900cc","#66cc00","#336633","#ff9aff","#003399","#330000"))
 # Set linetype legend colour
 update_geom_defaults("line",   list(colour = "grey"))
 
