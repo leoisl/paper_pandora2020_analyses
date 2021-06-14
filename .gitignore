@@ -44,3 +44,4 @@ scripts/create_package_of_repos/paper_pandora2020_code.zip
 scripts/csv_to_paper_plots/supplementary_table_1/.ipynb_checkpoints/
 
 scripts/random/illumina_reads_length/.ipynb_checkpoints/illumina_reads_length-checkpoint.ipynb
+/scripts/pull_containers/containers/
