@@ -17,8 +17,8 @@ scripts/csv_to_paper_plots/pandora1_paper_analysis_output_4_way/
 scripts/csv_to_paper_plots/pandora1_paper_analysis_output_20_way.zip
 
 scripts/csv_to_paper_plots/pandora1_paper_analysis_output_4_way.zip
-/scripts/csv_to_paper_plots/Figure10/gene_sample_ref_ED_nbsamples.illumina.csv
-/scripts/csv_to_paper_plots/Figure10/gene_sample_ref_ED_nbsamples.nanopore.csv
+/scripts/csv_to_paper_plots/gene_distance/gene_sample_ref_ED_nbsamples.illumina.csv
+/scripts/csv_to_paper_plots/gene_distance/gene_sample_ref_ED_nbsamples.nanopore.csv
 /scripts/get_time_and_RAM_usage/performance_logs/
 
 scripts/get_time_and_RAM_usage/.ipynb_checkpoints/

@@ -100,4 +100,4 @@ heatmap_fig = ggplot(count_melt, aes(FIRST_SAMPLE, SECOND_SAMPLE)) +
   theme(axis.text.x = element_text(colour = sample_to_colour_reverse)) +
   theme(axis.text.y = element_text(colour = sample_to_colour_forward))
 
-ggsave(heatmap_fig, file="Figure9.png", width=7, height=5, dpi=300)
+ggsave(heatmap_fig, file="two_SNP_heatmap.png", width=7, height=5, dpi=300)

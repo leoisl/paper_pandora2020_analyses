@@ -14,7 +14,7 @@ custom_label= expression(paste("mosaic + ", italic("de novo")))
 four_way_plot = ggplot(data=four_way_df, aes(x=error_rate, y=recalls_wrt_variants_found_wrt_alleles,
                                              group=tool, colour = local_assembly)) +
   geom_line(aes(linetype=four_way_df$methylation_aware)) + 
-  scale_x_continuous("Error rate", limits = c(0.0035,0.007), breaks= seq(0.0035,0.007,by=0.0005)) +
+  scale_x_continuous("Error rate", limits = c(0.0,0.006), breaks= seq(0.0,0.006,by=0.001)) +
   scale_y_continuous("Average allelic recall", limits = c(0.75, 0.91), breaks= seq(0.75,0.91,by=0.05)) +
   theme(legend.title = element_text(size = 8), 
         legend.text = element_text(size = 8)) +

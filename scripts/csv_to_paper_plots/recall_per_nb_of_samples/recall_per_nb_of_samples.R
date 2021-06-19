@@ -247,7 +247,7 @@ custom_legend_nanopore_only<-g_legend(custom_legend_nanopore_only_plot)
 # #=====================================
 nanopore_only_fig = grid.arrange(arrangeGrob(nanopore_variants+labs(tag="a"), nanopore_recall+labs(tag="b"), nrow=1),
                             custom_legend_nanopore_only, nrow=2, heights=c(5,1))
-ggsave(nanopore_only_fig, file="Figure7.png", width=15, height=5, dpi=300)
+ggsave(nanopore_only_fig, file="recall_per_number_of_samples_nanopore.png", width=15, height=5, dpi=300)
 
 
 
@@ -260,7 +260,7 @@ bottom_half_fig = grid.arrange(arrangeGrob(illumina_recall,
                                            nrow=1))
 final_plot = grid.arrange(top_half_fig, bottom_half_fig)
 
-ggsave(final_plot, file="SupplementaryFigureReviewA1.png", width=15, height=10, dpi=300)
+ggsave(final_plot, file="recall_per_number_of_samples_all.png", width=15, height=10, dpi=300)
 
 
 
@@ -270,7 +270,7 @@ supp_fig = grid.arrange(arrangeGrob(illumina_avg_allelic_recall,
                                     nrow=1),
                         custom_legend, nrow=2, heights=c(10,1))
 
-ggsave(supp_fig, file="SupplementaryFigureA4.png", width=15, height=5, dpi=300)
+ggsave(supp_fig, file="recall_per_number_of_samples_all_avgar.png", width=15, height=5, dpi=300)
 
 
 

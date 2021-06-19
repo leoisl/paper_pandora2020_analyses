@@ -1,0 +1,6 @@
+python preprocess.py
+Rscript recall_per_ref_per_clade_simplified_core.R recall_per_ref_per_clade_snippy_pandora.simplified.csv 0.75 \
+  recall_per_ref_per_clade_simplified_pandora_snippy_recall.png
+Rscript recall_per_ref_per_clade_simplified_core.R recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.simplified.csv \
+  0.0 recall_per_ref_per_clade_simplified_pandora_snippy_recall_2_snps.png
+Rscript recall_per_ref_per_clade_simplified.R
