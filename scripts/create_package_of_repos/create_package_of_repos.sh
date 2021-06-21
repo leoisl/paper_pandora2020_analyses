@@ -11,8 +11,8 @@ download_and_package_repo () {
   zip -r "$name.zip" "$name"
 }
 
-# Note: we did not include make_prg, as it is copied inside the pandora_workflow pipeline
 download_and_package_repo https://github.com/rmcolq/pandora pandora
+download_and_package_repo https://github.com/leoisl/make_prg make_prg
 download_and_package_repo https://github.com/iqbal-lab-org/varifier varifier
 download_and_package_repo https://github.com/iqbal-lab-org/pangenome_variations pangenome_variations
 download_and_package_repo https://github.com/iqbal-lab-org/subsampler subsampler
