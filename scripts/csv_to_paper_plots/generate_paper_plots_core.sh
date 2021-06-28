@@ -59,23 +59,24 @@ cp gene_distance/loci_ref_sample_approximation_ed_1.png paper_pandora2020_plots/
 cp gene_distance/loci_ref_sample_approximation_ed_0.png paper_pandora2020_plots/SupplementaryFigure12.png
 
 echo "Generating SF5..."
-cd gene_classification && bash produce_figure.sh && cd ..
-cp gene_classification/gene_classification.png paper_pandora2020_plots/SupplementaryFigure5.png
-
-echo "Generating SF6-10..."
-cd recall_per_ref_per_clade_complete && bash produce_figure.sh && cd ..
-cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_snippy_pandora.png paper_pandora2020_plots/SupplementaryFigure6.png
-cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_samtools_pandora.png paper_pandora2020_plots/SupplementaryFigure7.png
-cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_medaka_pandora.png paper_pandora2020_plots/SupplementaryFigure8.png
-cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_nanopolish_pandora.png paper_pandora2020_plots/SupplementaryFigure9.png
-cp recall_per_ref_per_clade_complete/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.png paper_pandora2020_plots/SupplementaryFigure10.png
-
-echo "Generating SF11"
-cp pangenome_variants/pangenome_variants.png paper_pandora2020_plots/SupplementaryFigure11.png
-
-echo "Generating SF13..."
 cd 4wayROC && bash produce_figure.sh && cd ..
-cp 4wayROC/ROC_data_old_and_new_basecall.png paper_pandora2020_plots/SupplementaryFigure13.png
+cp 4wayROC/ROC_data_old_and_new_basecall.png paper_pandora2020_plots/SupplementaryFigure5.png
+
+
+echo "Generating SF6..."
+cd gene_classification && bash produce_figure.sh && cd ..
+cp gene_classification/gene_classification.png paper_pandora2020_plots/SupplementaryFigure6.png
+
+echo "Generating SF7-11..."
+cd recall_per_ref_per_clade_complete && bash produce_figure.sh && cd ..
+cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_snippy_pandora.png paper_pandora2020_plots/SupplementaryFigure7.png
+cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_samtools_pandora.png paper_pandora2020_plots/SupplementaryFigure8.png
+cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_medaka_pandora.png paper_pandora2020_plots/SupplementaryFigure9.png
+cp recall_per_ref_per_clade_complete/recall_per_ref_per_clade_nanopolish_pandora.png paper_pandora2020_plots/SupplementaryFigure10.png
+cp recall_per_ref_per_clade_complete/recall_per_ref_per_nb_of_samples_per_clade.snippy_pandora.nb_of_samples_2.png paper_pandora2020_plots/SupplementaryFigure11.png
+
+echo "Generating SF13"
+cp pangenome_variants/pangenome_variants.png paper_pandora2020_plots/SupplementaryFigure13.png
 
 echo "Generating SA1"
 cp rcc/rcc.mov paper_pandora2020_plots/SupplementaryAnimation1.mov
