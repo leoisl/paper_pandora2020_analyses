@@ -1,24 +1,24 @@
 tool,sample,precision,ref,tool_and_ref
-pandora,063_STEC,0.9978122425239728,PRG,Pandora nanopore with denovo / PRG
-pandora,CFT073,0.9981305287328924,PRG,Pandora nanopore with denovo / PRG
-pandora,MINF_1A,0.9972695414097068,PRG,Pandora nanopore with denovo / PRG
-pandora,MINF_1D,0.9982080547907852,PRG,Pandora nanopore with denovo / PRG
-pandora,MINF_7C,0.9977685533496864,PRG,Pandora nanopore with denovo / PRG
-pandora,MINF_8D,0.9971392512390392,PRG,Pandora nanopore with denovo / PRG
-pandora,MINF_9A,0.9982212358919352,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_1A,0.9981632721034936,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_3B,0.9978387536018132,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_4E,0.9980446563708592,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_4I,0.9977371032082368,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_6C,0.9982597993388987,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_7A,0.997962613914636,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_7C,0.9980683382200619,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_8B,0.9981723880367512,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_8G,0.99802381620021,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB1_9D,0.9982465595873716,PRG,Pandora nanopore with denovo / PRG
-pandora,MSB2_1A,0.9980355051654236,PRG,Pandora nanopore with denovo / PRG
-pandora,H131800734,0.9983943346730874,PRG,Pandora nanopore with denovo / PRG
-pandora,ST38,0.9975392698435884,PRG,Pandora nanopore with denovo / PRG
+pandora,063_STEC,0.9983777202679024,PRG,Pandora nanopore with denovo / PRG
+pandora,CFT073,0.997926371317962,PRG,Pandora nanopore with denovo / PRG
+pandora,MINF_1A,0.9975671892614664,PRG,Pandora nanopore with denovo / PRG
+pandora,MINF_1D,0.9984417271621993,PRG,Pandora nanopore with denovo / PRG
+pandora,MINF_7C,0.9979859111222102,PRG,Pandora nanopore with denovo / PRG
+pandora,MINF_8D,0.9974702193401118,PRG,Pandora nanopore with denovo / PRG
+pandora,MINF_9A,0.9982957219112044,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_1A,0.9979983905095896,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_3B,0.9975307338613704,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_4E,0.9980686871910682,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_4I,0.9972302228923544,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_6C,0.9981283744277596,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_7A,0.9980558131295532,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_7C,0.997601941278042,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_8B,0.997940868611588,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_8G,0.9978641390599574,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB1_9D,0.9984269625760538,PRG,Pandora nanopore with denovo / PRG
+pandora,MSB2_1A,0.9984985974453296,PRG,Pandora nanopore with denovo / PRG
+pandora,H131800734,0.9985984595175152,PRG,Pandora nanopore with denovo / PRG
+pandora,ST38,0.9974152304360084,PRG,Pandora nanopore with denovo / PRG
 medaka,063_STEC,0.8300059581620948,LF82 (NC_011993.1),Medaka / LF82 (NC_011993.1)
 medaka,CFT073,0.8819682433093139,LF82 (NC_011993.1),Medaka / LF82 (NC_011993.1)
 medaka,MINF_1A,0.8342922275804194,LF82 (NC_011993.1),Medaka / LF82 (NC_011993.1)

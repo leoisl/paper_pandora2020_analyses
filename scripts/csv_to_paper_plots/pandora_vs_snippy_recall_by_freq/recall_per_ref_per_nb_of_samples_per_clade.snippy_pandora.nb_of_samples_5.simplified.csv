@@ -1,6 +1,6 @@
 tool,sample,nb_of_samples,recalls_wrt_truth_probes,ref,tool_and_ref
-Pandora illumina no denovo,063_STEC,5,0.8254697286012526,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,063_STEC,5,0.8369519832985386,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,063_STEC,5,0.9388308977035492,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,063_STEC,5,0.9388308977035492,PRG,Pandora illumina with denovo / PRG
 Snippy,063_STEC,5,0.6572025052192066,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,063_STEC,5,0.6711899791231732,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,063_STEC,5,0.5392484342379958,C4,Snippy / C4 (CP010121.1)
@@ -25,8 +25,8 @@ Snippy,063_STEC,5,0.5304801670146138,Y5,Snippy / Y5 (NZ_CP013483.1)
 Snippy,063_STEC,5,0.4611691022964509,C1,Snippy / C1 (CP010116.1)
 Snippy,063_STEC,5,0.4968684759916493,S1,Snippy / S1 (CP010226.1)
 Snippy,063_STEC,5,0.4966597077244259,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,CFT073,5,0.8264346190028222,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,CFT073,5,0.8316086547507056,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,CFT073,5,0.9207431796801504,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,CFT073,5,0.9207431796801504,PRG,Pandora illumina with denovo / PRG
 Snippy,CFT073,5,0.7382408278457196,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,CFT073,5,0.6190028222013171,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,CFT073,5,0.4971777986829728,C4,Snippy / C4 (CP010121.1)
@@ -51,8 +51,8 @@ Snippy,CFT073,5,0.33842897460018817,Y5,Snippy / Y5 (NZ_CP013483.1)
 Snippy,CFT073,5,0.37064910630291625,C1,Snippy / C1 (CP010116.1)
 Snippy,CFT073,5,0.3925211665098777,S1,Snippy / S1 (CP010226.1)
 Snippy,CFT073,5,0.4176857949200377,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MINF_1A,5,0.8744775703538591,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MINF_1A,5,0.8740596266369463,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MINF_1A,5,0.92908888269713,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MINF_1A,5,0.92908888269713,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MINF_1A,5,0.3949568124825857,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MINF_1A,5,0.7057676232933965,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MINF_1A,5,0.4593201448871552,C4,Snippy / C4 (CP010121.1)
@@ -77,8 +77,8 @@ Snippy,Escherichia_coli_MINF_1A,5,0.4314572304263026,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MINF_1A,5,0.4625243800501532,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MINF_1A,5,0.37447757035385904,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MINF_1A,5,0.3966285873502368,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MINF_1D,5,0.8090397531312398,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MINF_1D,5,0.8248320929388274,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MINF_1D,5,0.9183154837538572,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MINF_1D,5,0.9183154837538572,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MINF_1D,5,0.7275367580323108,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MINF_1D,5,0.5587220911236159,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MINF_1D,5,0.5737883463423489,C4,Snippy / C4 (CP010121.1)
@@ -103,8 +103,8 @@ Snippy,Escherichia_coli_MINF_1D,5,0.2722817208204756,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MINF_1D,5,0.3260119803957161,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MINF_1D,5,0.3655835904882919,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MINF_1D,5,0.4037030314031584,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MINF_7C,5,0.7981911447084233,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MINF_7C,5,0.8015658747300216,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MINF_7C,5,0.896463282937365,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MINF_7C,5,0.896463282937365,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MINF_7C,5,0.4366900647948164,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MINF_7C,5,0.5132289416846653,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MINF_7C,5,0.6822354211663066,C4,Snippy / C4 (CP010121.1)
@@ -129,8 +129,8 @@ Snippy,Escherichia_coli_MINF_7C,5,0.503914686825054,Y5,Snippy / Y5 (NZ_CP013483.
 Snippy,Escherichia_coli_MINF_7C,5,0.5946274298056156,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MINF_7C,5,0.4092872570194385,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MINF_7C,5,0.4272408207343413,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MINF_8D,5,0.7651356993736952,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MINF_8D,5,0.7705636743215031,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MINF_8D,5,0.8511482254697286,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MINF_8D,5,0.8511482254697286,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MINF_8D,5,0.33423799582463465,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MINF_8D,5,0.4304801670146138,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MINF_8D,5,0.4816283924843424,C4,Snippy / C4 (CP010121.1)
@@ -155,8 +155,8 @@ Snippy,Escherichia_coli_MINF_8D,5,0.7156576200417537,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MINF_8D,5,0.5313152400835073,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MINF_8D,5,0.5062630480167014,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MINF_8D,5,0.5791231732776618,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MINF_9A,5,0.8433511255511721,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MINF_9A,5,0.8435831979577628,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MINF_9A,5,0.8889533534462752,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MINF_9A,5,0.8889533534462752,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MINF_9A,5,0.5020886516593177,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MINF_9A,5,0.463680668368531,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MINF_9A,5,0.5587143188674867,C4,Snippy / C4 (CP010121.1)
@@ -181,8 +181,8 @@ Snippy,Escherichia_coli_MINF_9A,5,0.4824785333023903,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MINF_9A,5,0.4861916918078441,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MINF_9A,5,0.4395451380830819,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MINF_9A,5,0.5047574843351126,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_1A,5,0.7366235035426337,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_1A,5,0.743708771072563,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_1A,5,0.7898851698021011,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_1A,5,0.7898851698021011,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_1A,5,0.3217688736867823,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_1A,5,0.4209626191057904,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_1A,5,0.4642071829953579,C4,Snippy / C4 (CP010121.1)
@@ -207,8 +207,8 @@ Snippy,Escherichia_coli_MSB1_1A,5,0.7131688248228684,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_1A,5,0.4896164182751038,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_1A,5,0.5321280234546787,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_1A,5,0.5936965550940629,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_3B,5,0.6580229226361032,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_3B,5,0.6714899713467049,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_3B,5,0.7810888252148998,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_3B,5,0.7810888252148998,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_3B,5,0.17893982808022926,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_3B,5,0.2707736389684814,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_3B,5,0.44355300859598856,C4,Snippy / C4 (CP010121.1)
@@ -233,8 +233,8 @@ Snippy,Escherichia_coli_MSB1_3B,5,0.3151862464183381,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_3B,5,0.6011461318051576,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_3B,5,0.2342406876790831,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_3B,5,0.28094555873925503,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_4E,5,0.8479135532819865,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_4E,5,0.8481434647660651,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_4E,5,0.9009081503621106,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_4E,5,0.9009081503621106,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_4E,5,0.514771812852052,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_4E,5,0.9309115990343718,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_4E,5,0.358891826646741,C4,Snippy / C4 (CP010121.1)
@@ -259,8 +259,8 @@ Snippy,Escherichia_coli_MSB1_4E,5,0.4414300494309691,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_4E,5,0.3444074031497873,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_4E,5,0.43131394413150936,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_4E,5,0.4041843890102311,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_4I,5,0.7045483339668059,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_4I,5,0.7462308374509059,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_4I,5,0.8630432028379577,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_4I,5,0.8630432028379577,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_4I,5,0.45990117825921706,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_4I,5,0.5607500316736349,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_4I,5,0.4495122260230584,C4,Snippy / C4 (CP010121.1)
@@ -285,8 +285,8 @@ Snippy,Escherichia_coli_MSB1_4I,5,0.23755226149752945,Y5,Snippy / Y5 (NZ_CP01348
 Snippy,Escherichia_coli_MSB1_4I,5,0.2963385278094514,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_4I,5,0.3206638793867984,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_4I,5,0.34549600912200684,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_6C,5,0.6081213307240705,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_6C,5,0.6203522504892368,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_6C,5,0.7392367906066536,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_6C,5,0.7392367906066536,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_6C,5,0.1304631441617743,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_6C,5,0.26842791911285063,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_6C,5,0.4463470319634703,C4,Snippy / C4 (CP010121.1)
@@ -311,8 +311,8 @@ Snippy,Escherichia_coli_MSB1_6C,5,0.2609262883235486,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_6C,5,0.6860730593607306,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_6C,5,0.1643835616438356,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_6C,5,0.184116112198304,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_7A,5,0.6130749889069664,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_7A,5,0.6343736133708031,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_7A,5,0.7419020854903121,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_7A,5,0.7419020854903121,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_7A,5,0.12231918355272887,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_7A,5,0.2412365034758172,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_7A,5,0.3953557166099689,C4,Snippy / C4 (CP010121.1)
@@ -337,8 +337,8 @@ Snippy,Escherichia_coli_MSB1_7A,5,0.2901937583197752,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_7A,5,0.5651530838633338,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_7A,5,0.18517970714391369,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_7A,5,0.21831090075432627,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_7C,5,0.6542372881355932,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_7C,5,0.6763603925066904,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_7C,5,0.7935771632471008,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_7C,5,0.7935771632471008,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_7C,5,0.3295272078501338,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_7C,5,0.5068688670829616,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_7C,5,0.5090098126672614,C4,Snippy / C4 (CP010121.1)
@@ -363,8 +363,8 @@ Snippy,Escherichia_coli_MSB1_7C,5,0.2520963425512935,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_7C,5,0.3926851025869759,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_7C,5,0.2376449598572703,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_7C,5,0.2563782337198929,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_8B,5,0.7575564747056952,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_8B,5,0.7683741648106904,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_8B,5,0.8129175946547884,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_8B,5,0.8129175946547884,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_8B,5,0.3951638561883551,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_8B,5,0.3948456888323258,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_8B,5,0.42968501431753103,C4,Snippy / C4 (CP010121.1)
@@ -389,8 +389,8 @@ Snippy,Escherichia_coli_MSB1_8B,5,0.1907413299395482,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_8B,5,0.2505567928730512,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_8B,5,0.275532930321349,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_8B,5,0.31482659879096403,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_8G,5,0.69325,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_8G,5,0.69775,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_8G,5,0.74875,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_8G,5,0.74875,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_8G,5,0.32775,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_8G,5,0.41,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_8G,5,0.37875,C4,Snippy / C4 (CP010121.1)
@@ -415,8 +415,8 @@ Snippy,Escherichia_coli_MSB1_8G,5,0.74,Y5,Snippy / Y5 (NZ_CP013483.1)
 Snippy,Escherichia_coli_MSB1_8G,5,0.413,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_8G,5,0.56025,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_8G,5,0.62075,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB1_9D,5,0.7262948866457057,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB1_9D,5,0.7509515141486017,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB1_9D,5,0.8019195763693531,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB1_9D,5,0.8019195763693531,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB1_9D,5,0.5442660930001655,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB1_9D,5,0.3584312427602184,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB1_9D,5,0.5247393678636438,C4,Snippy / C4 (CP010121.1)
@@ -441,8 +441,8 @@ Snippy,Escherichia_coli_MSB1_9D,5,0.5055436041701142,Y5,Snippy / Y5 (NZ_CP013483
 Snippy,Escherichia_coli_MSB1_9D,5,0.323183849081582,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB1_9D,5,0.6255171272546748,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB1_9D,5,0.7390369022008936,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,Escherichia_coli_MSB2_1A,5,0.7416600790513834,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,Escherichia_coli_MSB2_1A,5,0.7631620553359684,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,Escherichia_coli_MSB2_1A,5,0.8031620553359684,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,Escherichia_coli_MSB2_1A,5,0.8031620553359684,PRG,Pandora illumina with denovo / PRG
 Snippy,Escherichia_coli_MSB2_1A,5,0.4793675889328064,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,Escherichia_coli_MSB2_1A,5,0.7075098814229249,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,Escherichia_coli_MSB2_1A,5,0.2769960474308301,C4,Snippy / C4 (CP010121.1)
@@ -467,8 +467,8 @@ Snippy,Escherichia_coli_MSB2_1A,5,0.32521739130434785,Y5,Snippy / Y5 (NZ_CP01348
 Snippy,Escherichia_coli_MSB2_1A,5,0.24189723320158105,C1,Snippy / C1 (CP010116.1)
 Snippy,Escherichia_coli_MSB2_1A,5,0.2769960474308301,S1,Snippy / S1 (CP010226.1)
 Snippy,Escherichia_coli_MSB2_1A,5,0.27035573122529644,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,H131800734,5,0.7215545896190233,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,H131800734,5,0.7320378419841472,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,H131800734,5,0.7509588340577857,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,H131800734,5,0.7509588340577857,PRG,Pandora illumina with denovo / PRG
 Snippy,H131800734,5,0.4124264893889031,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,H131800734,5,0.47379186908719,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,H131800734,5,0.3684479672717975,C4,Snippy / C4 (CP010121.1)
@@ -493,8 +493,8 @@ Snippy,H131800734,5,0.6297622091536691,Y5,Snippy / Y5 (NZ_CP013483.1)
 Snippy,H131800734,5,0.3628228074661212,C1,Snippy / C1 (CP010116.1)
 Snippy,H131800734,5,0.7706468933776528,S1,Snippy / S1 (CP010226.1)
 Snippy,H131800734,5,0.7478905650728714,H6,Snippy / H6 (CP010170.1)
-Pandora illumina no denovo,ST38,5,0.5919486215538847,PRG,Pandora illumina no denovo / PRG
-Pandora illumina with denovo,ST38,5,0.6088659147869674,PRG,Pandora illumina with denovo / PRG
+Pandora illumina no denovo,ST38,5,0.6849937343358395,PRG,Pandora illumina no denovo / PRG
+Pandora illumina with denovo,ST38,5,0.6849937343358395,PRG,Pandora illumina with denovo / PRG
 Snippy,ST38,5,0.14912280701754385,LF82,Snippy / LF82 (NC_011993.1)
 Snippy,ST38,5,0.30372807017543857,JJ1886,Snippy / JJ1886 (NC_022648.1)
 Snippy,ST38,5,0.381265664160401,C4,Snippy / C4 (CP010121.1)
