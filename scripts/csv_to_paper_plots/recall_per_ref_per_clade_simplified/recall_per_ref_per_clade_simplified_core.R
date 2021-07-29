@@ -92,6 +92,7 @@ for (current_ref in ref_ordering) {
     plot <- ggplot(data = recall_table_for_ref, aes(x=sample, y=recalls_wrt_truth_probes, fill=sample)) +
         scale_fill_manual(values = sample_colouring) +
         geom_bar(stat = "identity") +
+        ylab("Pan-variant recall") +
         coord_cartesian(ylim=c(min_y, 1)) +
         geom_line(data=recall_table_for_pandora_with_denovo, aes(x=sample, y=recalls_wrt_truth_probes, group=1), colour = "black", size = 1) +
         ggtitle(current_ref) +
@@ -100,7 +101,7 @@ for (current_ref in ref_ordering) {
                                           colour = ref_color),
           axis.title.x=element_blank(),
           axis.ticks.x=element_blank(),
-          axis.title.y=element_blank(),
+          axis.title.y=if(index==1) element_text(size=20) else element_blank(),
           axis.ticks.y=element_blank(),
           plot.title = element_text(hjust = 0.5, size=22),
           axis.text.x=element_blank(),
