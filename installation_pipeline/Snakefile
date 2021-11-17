@@ -67,7 +67,7 @@ rule install_pandora_workflow:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive https://github.com/iqbal-lab-org/pandora_workflow && \
+        git clone --recursive https://github.com/leoisl/pandora_workflow && \
         cd pandora_workflow && \
         git checkout make_prg_1_0_0 && \
         ./setup.sh
