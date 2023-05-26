@@ -69,7 +69,7 @@ rule install_pandora_workflow:
         cd {output_dir} && \
         git clone --recursive https://github.com/leoisl/pandora_workflow && \
         cd pandora_workflow && \
-        git checkout racon && \
+        git checkout pandora_verification_b19d26 && \
         ./setup.sh
         """
 
