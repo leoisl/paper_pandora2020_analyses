@@ -8,10 +8,7 @@ rule all:
         output_dir / "pangenome_variations",
         output_dir / "subsampler",
         output_dir / "pandora_workflow",
-        output_dir / "variant_callers_pipeline",
         output_dir / "pandora_paper_roc",
-        output_dir / "pandora_gene_distance",
-
 
 rule link_input_data:
     input:
@@ -35,9 +32,9 @@ rule install_pangenome_variations:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive https://github.com/iqbal-lab-org/pangenome_variations && \
+        git clone --recursive https://github.com/leoisl/pangenome_variations && \
         cd pangenome_variations && \
-        git checkout pandora_paper_update_31_03_2021 && \
+        git checkout pandora_verification_b19d26 && \
         ./setup.sh
         """
 
@@ -99,9 +96,9 @@ rule install_pandora_paper_roc:
     shell:
         """
         cd {output_dir} && \
-        git clone --recursive https://github.com/iqbal-lab-org/pandora_paper_roc && \
+        git clone --recursive https://github.com/leoisl/pandora_paper_roc && \
         cd pandora_paper_roc && \
-        git checkout pandora_paper_update_31_03_2021 && \
+        git checkout pandora_verification_b19d26 && \
         ./setup.sh
         """
 
